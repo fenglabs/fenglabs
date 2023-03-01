@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reflection on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/reflection/</link>
+    <description>Recent content in Reflection on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Mon, 19 Jul 2021 08:00:34 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/reflection/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go系列教程（三十四） | 反射(Reflection)</title>
+      <link>https://shaichunfeng.com/post/2021/07/19/34-reflection/</link>
+      <pubDate>Mon, 19 Jul 2021 08:00:34 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/07/19/34-reflection/</guid>
+      <description>反射是 Go 语言的高级主题之一。我会尽可能让它变得简单易懂。
+本教程分为如下小节。
+什么是反射？ 为何需要检查变量，确定变量的类型？ reflect 包 reflect.Type 和 reflect.Value reflect.Kind NumField() 和 Field() 方法 Int() 和 String() 方法 完整的程序 我们应该使用反射吗？ 让我们来逐个讨论这些章节。
+什么是反射？ 反射就是程序能够在运行时检查变量和值，求出它们的类型。你可能还不太懂，这没关系。在本教程结束后，你就会清楚地理解反射，所以跟着我们的教程学习吧。
+为何需要检查变量，确定变量的类型？ 在学习反射时，所有人首先面临的疑惑就是：如果程序中每个变量都是我们自己定义的，那么在编译时就可以知道变量类型了，为什么我们还需要在运行时检查变量，求出它的类型呢？没错，在大多数时候都是这样，但并非总是如此。
+我来解释一下吧。下面我们编写一个简单的程序。
+1 2 3 4 5 6 7 8 9 10 package main import ( &amp;#34;fmt&amp;#34; ) func main() { i := 10 fmt.</description>
+    </item>
+    
+  </channel>
+</rss>

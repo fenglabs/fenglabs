@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Golang on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/categories/golang/</link>
+    <description>Recent content in Golang on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Sat, 26 Mar 2022 15:20:29 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Golang设计模式（二） | 工厂模式</title>
+      <link>https://shaichunfeng.com/post/2022/03/26/golang-design-patten-for-factory/</link>
+      <pubDate>Sat, 26 Mar 2022 15:20:29 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2022/03/26/golang-design-patten-for-factory/</guid>
+      <description>工厂模式（Factory Pattern）是面向对象编程中的常用模式。在 Golang 项目开发中，你可以通过使用简单工厂模式、抽象工厂模式、工厂方法模式，来使代码更简洁明了。 简单工厂模式返回结构体类型；而抽象工厂模式返回接口类型；工厂方法返回一个闭包，下面具体的看看每一种工厂模式的使用。
+Golang 中的结构体，可以理解为面向对象编程中的类，例如 Student 结构体（类）实现了 SayHello 方法。
+1 2 3 4 5 6 7 8 9 type Student struct { name string // 可以使用uint8类型表示例sex别，这里为了仅仅只是为了直观可视 sex string } func (s Student) SayHello() { fmt.Printf(&amp;#34;Hi! My name is %s, %s&amp;#34;, s.name, s.sex) } 有了 Student 结构体（类），就可以创建 Student 实例。我们可以通过简单工厂模式、抽象工厂模式、工厂方法模式这三种方式，来创建一个 Student 实例。</description>
+    </item>
+    
+    <item>
+      <title>Golang设计模式（一） | 单例模式</title>
+      <link>https://shaichunfeng.com/post/2022/03/26/golang-design-patten-for-singleten/</link>
+      <pubDate>Sat, 26 Mar 2022 15:02:24 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2022/03/26/golang-design-patten-for-singleten/</guid>
+      <description>单例模式（Singleton Pattern），是最简单的一个模式。在 Go 中，单例模式指的是全局只有一个实例，并且它负责创建自己的对象。单例模式不仅有利于减少内存开支，还有减少系统性能开销、防止多个实例产生冲突等优点。
+因为单例模式保证了实例的全局唯一性，而且只被初始化一次，所以比较适合『全局共享一个实例，且只需要被初始化一次的场景』，例如数据库实例、全局配置、全局任务池等。
+单例模式又分为饿汉方式和懒汉方式。饿汉方式指全局的单例实例在包被加载时创建，而懒汉方式指全局的单例实例在第一次被使用时创建。你可以看到，这种命名方式非常形象地体现了它们不同的特点。
+接下来，我就来分别介绍下这两种方式。先来看饿汉方式。
+饿汉方式 下面是一个饿汉方式的单例模式代码：
+1 2 3 4 5 6 7 8 9 10 package singleton type singleton struct { } var instance *singleton = &amp;amp;singleton{} func GetInstanceOr() *singleton { return instance } 你需要注意，因为实例是在包被导入时初始化的，所以如果初始化操作比较耗时，会导致程序加载时间比较长。
+懒汉方式 懒汉方式是开源项目中使用最多的，但它的缺点是非并发安全，在实际使用时需要加锁。以下是懒汉方式不加锁的一个实现：
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 package singleton type singleton struct { } var instance *singleton func GetInstanceOr() *singleton { if instance == nil { instance = &amp;amp;singleton{} } return instance } 可以看到，在创建 @@instance@@ 时，如果 @@instance==nil@@，就会再创建一个 @@instance@@ 实例，这时候单例就会有多个实例。</description>
+    </item>
+    
+    <item>
+      <title>Go 私有库访问设置</title>
+      <link>https://shaichunfeng.com/post/2021/08/07/go-private-library-access-settings/</link>
+      <pubDate>Sat, 07 Aug 2021 17:57:25 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/08/07/go-private-library-access-settings/</guid>
+      <description>私有库是那些不想公开的库，不开源或不共享的存储库，比如公司内部开发的go包，或自己个人Github服务器上的私有go包，通过go get直接下载私有包是不被允许的，要通过一些设置才可以访问私有存储库。
+配置Git 1 $ git config --global url.git@github.com:.insteadOf https://github.com/ 最终会将上面执行的命令添加到git配置文件中，具体如下所示：
+1 2 3 $ cat ~/.gitconfig [url &amp;#34;git@github.com:&amp;#34;] insteadOf = https://github.com/ 配置Go环境 为了让 Go 模块工作（使用 Go 1.11 或更新版本），您还需要设置 GOPRIVATE 变量，以避免使用公共服务器来获取代码：
+1 $ go env -w GOPRIVATE=github.com/private/repo 如果需要访问多个存储库则需要多次添加，并以逗号分隔
+1 $ go env -w GOPRIVATE=github.com/private/repo-a,github.com/private/repo-b 下载私有库 1 $ go get github.com/private/repo </description>
+    </item>
+    
+    <item>
+      <title>Slice 具体使用</title>
+      <link>https://shaichunfeng.com/post/2021/07/26/slice-use/</link>
+      <pubDate>Mon, 26 Jul 2021 18:22:09 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/07/26/slice-use/</guid>
+      <description>删除Slice的一个元素 1 2 3 func remove(slice []int, index int) []int { return append(slice[:index], slice[index+1:]...) } 清空Slice的所有元素 1 2 3 func remove(slice []int) []int { return slice[:0] } </description>
+    </item>
+    
+    <item>
+      <title>Go语言调用C语言代码</title>
+      <link>https://shaichunfeng.com/post/2021/06/21/go-call-c/</link>
+      <pubDate>Mon, 21 Jun 2021 15:51:11 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/06/21/go-call-c/</guid>
+      <description>Go 语言除了语法精炼、并发支持好外，还有一个优点就是可以调用 C 代码。可以直接在 Go 源代码里写 C 代码，也可以引 C 语言的外部库。这样在性能遇到瓶颈的地方可以重写，或者某些功能 Go 和第三方还缺失，但 C 语言有现成的库就可以直接用了。官方 Cgo 这块目前有一篇博客 https://blog.golang.org/c-go-cgo 和 命令行文档 https://golang.org/cmd/cgo/ 对 Cgo 进行了说明，其中某些地方还不够明确或者没有提到的地方。
+Section1：Go语言内联C语言代码 下面例子是直接将 C 代码内嵌在 Go 源代码里，引入了一个不存在的包 “C”, 然后将 C 代码写在了引入上面，注意只能写在 “C” 包上面。这里定义了一个sum函数, 然后通过 C.sum 在 Go 代码里使用。
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 package main /* 内联C语言代码 Start */ // // sum calc a and b sum value.</description>
+    </item>
+    
+    <item>
+      <title>Golang 字符串处理，删除文件中的指定行</title>
+      <link>https://shaichunfeng.com/post/2021/06/19/golang-string-processing/</link>
+      <pubDate>Sat, 19 Jun 2021 13:33:35 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/06/19/golang-string-processing/</guid>
+      <description>在Go语言中字符串处理操作，可用的内建包有strings、bytes、strconv、regexp、fmt等等吧，不管在任何语言中字符串处理、数组处理在日常开发中都是非常频繁的，当然了，Go语言中用的最多的是不数组而是slice切片，写这篇文章的目的不是记录标准库的常规操作，而是记录一些配合标准库处理字符串的技巧性操作，这篇文章不会一下记录所有的字符串处理场景，但是会持续性的更新，希望我这些遇到的字符串处理案例可以对您的开发工作有所帮助~
+完成这个字符串场景处理需要使用到正则表达式，Go语言提供的标准库为regexp，以及文件操作。具体思路这样子的，读取文件内容，使用正则表达式去匹配指定字符串所在的行，然后删除即可，最后将处理后的字符串保存到文件，这个字符串处理场景需要也就完成了，来看具体的代码如何实现。
+现在，在demo目录下有一个文本文件，如helloshaohua.txt内容如下：
+1 2 3 4 $ cat ./demo/helloshaohua.txt helloshaohua WillDeleteLine wu.shaohua@foxmail.com 可以看到，现在这个文件有3行，比如说想要删除 WillDeleteLine 这个特定字符串所在的行，让这个文件变为2行，最终的文件内容应该如下：
+1 2 3 $ cat ./demo/helloshaohua.txt helloshaohua wu.shaohua@foxmail.com 这是我们预期想要达到的目标，有了这个简单的小场景需求，来编写具体的代码实现，在demo目录下创建demo.go具体如下：
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 package demo import ( &amp;#34;errors&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;io/ioutil&amp;#34; &amp;#34;os&amp;#34; &amp;#34;regexp&amp;#34; ) // DeleteFileSpecificContentLine Deletes lines of a file that contain specific content.</description>
+    </item>
+    
+    <item>
+      <title>正则表达式用例</title>
+      <link>https://shaichunfeng.com/post/2021/06/18/regular-expression-use-case/</link>
+      <pubDate>Fri, 18 Jun 2021 22:53:56 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/06/18/regular-expression-use-case/</guid>
+      <description>匹配多个字符 匹配多个空格 1 \s+ 可以将包含一个或多个的空格统一处理为一个空格，如有如下字符串：
+1 2 $ ll drwx------@ 3 helloshaohua staff 96B 1 29 09:48 Applications </description>
+    </item>
+    
+    <item>
+      <title>JSON 转换到 Go 结构体类型</title>
+      <link>https://shaichunfeng.com/post/2021/06/17/json-to-go-structure/</link>
+      <pubDate>Thu, 17 Jun 2021 15:17:04 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/06/17/json-to-go-structure/</guid>
+      <description>json-to-go 该工具立即将 JSON 转换为 Go 类型定义。在左侧粘贴一个 JSON 结构，右侧将生成等效的 Go 类型，您可以将其粘贴到您的程序中。该脚本必须做出一些假设，因此请仔细检查输出！
+服务地址 JSON-TO-GO
+示例截图 </description>
+    </item>
+    
+    <item>
+      <title>Golang Float64和字节数组之间的交换</title>
+      <link>https://shaichunfeng.com/post/2021/06/17/golang-and-interchange-between-bytes/</link>
+      <pubDate>Thu, 17 Jun 2021 11:08:46 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/06/17/golang-and-interchange-between-bytes/</guid>
+      <description>Go语言是强类型语言，不支持类型的隐式类型转换，所有类型都需要显示进行转换，那么bytes数组如何转换为Float64，以及Float64将转换为bytes数组，也就是它们之间的互相转换如何做到。这两种类型的转换不能直接转换需要转换为中间类型然后再转换为对应的类型。
+bytes数组转换为Float64 1 2 3 4 5 6 7 8 9 10 11 12 package converter import ( &amp;#34;encoding/binary&amp;#34; &amp;#34;math&amp;#34; ) func BytesToFloat64(bytes []byte) float64 { bits := binary.LittleEndian.Uint64(bytes) float := math.Float64frombits(bits) return float } float64转换为bytes数组 1 2 3 4 5 6 7 8 9 10 11 12 13 14 package converter import ( &amp;#34;encoding/binary&amp;#34; &amp;#34;math&amp;#34; ) func Float64ToBytes(float float64) []byte { bits := math.</description>
+    </item>
+    
+    <item>
+      <title>Golang交叉编译</title>
+      <link>https://shaichunfeng.com/post/2021/06/13/golang-cross-compile/</link>
+      <pubDate>Sun, 13 Jun 2021 01:29:24 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/06/13/golang-cross-compile/</guid>
+      <description>Golang项目开发完成后最终是要放到服务器上去跑的，那么就需要编译出对应平台及CPU构架类型的可执行程序上传到服务器。由于业务需要构建多个平台，每一次都需要多次构建，非常不方便，于是乎可以将其在Shell脚本中自动化的快速构建多个不台平台程序，这样可以省去不必要的没有意义的操作。
+查看Golang支持的平台及CPU框架 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 $ go tool dist list aix/ppc64 android/386 android/amd64 android/arm android/arm64 darwin/amd64 darwin/arm64 dragonfly/amd64 freebsd/386 freebsd/amd64 freebsd/arm freebsd/arm64 illumos/amd64 js/wasm linux/386 linux/amd64 linux/arm linux/arm64 linux/mips linux/mips64 linux/mips64le linux/mipsle linux/ppc64 linux/ppc64le linux/riscv64 linux/s390x netbsd/386 netbsd/amd64 netbsd/arm netbsd/arm64 openbsd/386 openbsd/amd64 openbsd/arm openbsd/arm64 plan9/386 plan9/amd64 plan9/arm solaris/amd64 windows/386 windows/amd64 windows/arm 可以看到当前系统安装的Go语言支持的操作类型及CPU构架详情列表信息，注意，每一行是一种平台及CPU构架描述，非常直观一看就会明白，不用让我们一个一个去到对应服务器上去查看平台类型及CPU构架，非常方便。</description>
+    </item>
+    
+    <item>
+      <title>Golang项目Git忽略文件配置</title>
+      <link>https://shaichunfeng.com/post/2021/05/19/go-gitignore/</link>
+      <pubDate>Wed, 19 May 2021 23:19:11 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/05/19/go-gitignore/</guid>
+      <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 # Editor files. .idea # Binaries for programs and plugins *.exe *.exe~ *.dll *.so *.dylib # Test binary, built with `go test -c` *.test # Output of the go coverage tool, specifically when used with LiteIDE *.</description>
+    </item>
+    
+    <item>
+      <title>Golang请求第三方API接口发送POST请求的几种方式</title>
+      <link>https://shaichunfeng.com/post/2020/05/23/go-requests-third-party-api-interfaces-to-send-post-requests-in-several-ways/</link>
+      <pubDate>Sat, 23 May 2020 00:00:55 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2020/05/23/go-requests-third-party-api-interfaces-to-send-post-requests-in-several-ways/</guid>
+      <description>在项目中如果要用到第三方服务，第三方服务肯定会有一服务接口文档，难免不会有一些API接口是必须要通过POST方式请求，那么在Golang中如何发送POST请求到其它第三服务呢? 如果说有3种或4种方式，这种说法也不太确切，这个具体要看第三方服务接口接收数据的格式，如果只接收XML数据格式那你也就只能通过XML格式发送请求数据到第三方API接口，来看几种常用的POST请求方式~
+模拟第三方服务 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 package main import ( &amp;#34;log&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;github.com/gin-gonic/gin&amp;#34; ) type Product struct { Name string `json:&amp;#34;name&amp;#34; form:&amp;#34;name&amp;#34; xml:&amp;#34;name&amp;#34; binding:&amp;#34;required&amp;#34;` Number int `json:&amp;#34;number&amp;#34; form:&amp;#34;number&amp;#34; xml:&amp;#34;number&amp;#34; binding:&amp;#34;required&amp;#34;` } func main() { r := gin.</description>
+    </item>
+    
+    <item>
+      <title>如何解决Go测试相对路径问题？来来掰扯掰扯</title>
+      <link>https://shaichunfeng.com/post/2020/05/20/how-to-solve-the-relative-path-problem-of-go-test/</link>
+      <pubDate>Wed, 20 May 2020 23:25:35 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2020/05/20/how-to-solve-the-relative-path-problem-of-go-test/</guid>
+      <description>写这篇文章的初衷是想总结一下Go项目开发中关于解决测试相对路径问题的思考，你可能在Go项目中遇到了这个问题，测试通过了运行服务之后，访问已运行的服务发现它依然存在问题找不到相关资源，那你简单的将资源路径改对了，去重启服务之后资源也能找到了，好开心有木有? 不好意思你不要开心这早好不好，敢不敢不再跑跑你的测试，咦~ 怎么又找不到资源了，what the hell，怎么搞好嘛~ 来来一起搞搞看好了~
+为什么会出现这种情况 原因是这样子的，比如这么说吧，在你的项目目录下有一个api目录，其中有一个markdown.go这个Go文件，在这个Go文件中定义了名为GetMarkdown的API接口，这个接口要访问项目目录下的static/markdown目录下的静态文件，那你可能在读取文件的时候直接给了一个文件路径如./static/markdown/article_1.md，你又在api目录下定义了一个测试文件markdown_test.go用于测试markdown相关的API接口，当你运行测试方法，测试GetMarkdown这个接口时，那么问题来了，当你跑测试的时候那当前测试程序是在项目api目录下，那这个测试程序它在访问资源的时候是以当前测试程序所在目录api为起点去查找相关资源的，这个时候你的api目录下并没有./static/markdown/article_1.md这个文件，所以它就找不到这个资源了，所以这个时候你有严谨的错误处理机制它就会被执行，把错误返回，告诉你 open ./static/markdown/article_1.md: no such file or directory。所以当你运行main.go的时候，访问GetMarkdown这个API接口它查找资源是在项目目录内，所以也就找到了static/markdown/article_1.md这个文件。这么说可能比较抽象，下面通过一个简单的示例项目说明这个问题。
+示例项目目录结构 这个简单示例项目目录结构如下所示，hello-demo为项目名称：
+1 2 3 4 5 6 7 8 9 10 11 $ tree . ├── api │ ├── markdown.go │ └── markdown_test.go ├── main.go └── static └── markdown ├── article_1.md ├── article_2.md └── article_3.</description>
+    </item>
+    
+    <item>
+      <title>如何解决Golang包循环引入问题？</title>
+      <link>https://shaichunfeng.com/post/2020/05/19/how-do-i-solve-the-go-package-loop-introduction-problem/</link>
+      <pubDate>Tue, 19 May 2020 23:14:53 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2020/05/19/how-do-i-solve-the-go-package-loop-introduction-problem/</guid>
+      <description>Go不允许存在包的循环引入，你是不是也在项目开发时遇到过 import cycle not allowed 编译错误呢? 你找到好的解决方案了没有呢? 下文也许可能会对你解决这个问题有所帮助~
+何为包的循环引入 如在项目中有bar包和foo包，假如bar包用到了foo包代码，并且foo包也用到了bar包代码，那么这时就会产生编译错误import cycle not allowed意为&amp;quot;不允许循环引入&amp;quot;。
+假定示例项目结构如下：
+1 2 3 4 5 6 7 8 9 $ depend git:(master) tree . ├── bar │ └── bar.go ├── foo │ └── foo.go └── main.go 2 directories, 3 files bar/bar.go代码如下：
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 package bar import ( &amp;#34;depend/foo&amp;#34; &amp;#34;fmt&amp;#34; ) type Bar struct { Name string Description string } func NewBar(name string, description string) *Bar { return &amp;amp;Bar{Name: name, Description: description} } func (b *Bar) Info() { fmt.</description>
+    </item>
+    
+    <item>
+      <title>Golang 搭建的服务器局域网不能访问?</title>
+      <link>https://shaichunfeng.com/post/2020/05/18/can-not-access-the-server-lan-built-by-go/</link>
+      <pubDate>Mon, 18 May 2020 23:01:53 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2020/05/18/can-not-access-the-server-lan-built-by-go/</guid>
+      <description>在Go项目中如果你想在局域网访问Go运行的服务器，那么就不应该指定其地址为 localhost:port 或者 127.0.0.1:port，应该指定为 :port 或 0.0.0.0:port 的形式！为什么呢？
+说整明白这是怎么回事，这时候就是考验你网络基础的时候了，上大学的时候计算机专业都是有学过的哦(《计算机网络》想起来了吧)，来复习一下几个概念：
+本地环回地址 域名解析 默认路由 何为本地环回地址 运用本地环回机制，便可在主机上运行网络服务，期间不须安装实体网络接口卡(也就是物理网卡)，也无须将该服务开放予主机所在的网络。例如，在设置好本地安装的网站后，可通过 http://localhost 这一网址，来访问本地网站！
+域名解析一般会将localhost解析为IPv4本地环回地址 127.0.0.1 和IPv6本地环回地址 [::1]。
+localhost是一个在计算机网络中用于表示 &amp;ldquo;此计算机&amp;rdquo; 的主机名。它被用于通过本地环回网络接口，来访问本机运行的服务，并且将会绕过任何物理网络接口硬件。—维基百科
+何为域名解析 简单粗暴的解释就是从IP到域名转换。
+由以上概念可知，localhost或127.0.0.1只能在本地主机里玩耍，玩的再嗨别的主机也不知道你玩什么，那么怎么也让别的主机知道你在玩什么呢? 或者说访问本地主机跑的服务，那这个时候就需要在复习一下什么是默认路由哦~
+何为默认路由 默认路由(Default route)，是对IP数据包中的目的地址找不到存在的其他路由时，路由器所选择的路由。目的地不丰路由器的路由表里的所有数据包都会使用默认路由。这条路由一般会连去另一个路由器，而这个路由器也同样处理数据包；如果知道应该怎么路由这个数据包，则数据包会被转发到已知的路由；否则，数据包会被转发到默认路由，从而到达另一个路由器。每次转发，路由都增加了一跳的距离。当到达了一个知道如何到达目的地址的路由器时，这个路由器就会根据最长前缀匹配来选择有效的路由。子网掩码匹配目的IP地址而且又最长的网络会被选择。用无类别域间路由标记表示的IPv4默认路由是0.0.0.0/0。—维基百科
+由上可知 0.0.0.0 为默认路由，要想局域网内的其它主机访问当前主机要必须使用默认路由而不能使用localhost或127.0.0.1， :port 表示的就是0.0.0.0、localhost、127.0.0.1 之和，所示说，当前启动一个Go服务器的时候，要么明确指定 0.0.0.0:port 要么指定 :port 局域网内的其它主机方可访问到~
+Go服务示例 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 package main import ( &amp;#34;github.</description>
+    </item>
+    
+    <item>
+      <title>Golang JSON RPC 使用</title>
+      <link>https://shaichunfeng.com/post/2020/05/11/golang-json-rpc-use/</link>
+      <pubDate>Mon, 11 May 2020 23:20:55 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2020/05/11/golang-json-rpc-use/</guid>
+      <description>JSON-RPC，是一个无状态且轻量级的远程过程调用传送协议，其传递内容主要以JSON数据为主，相较于一般的 RESTFul 通过 URL 地址，如 GET /student 调用远程服务器，JSON-RPC直接在内容中定义了想要调用的方法名称如，@@{&amp;ldquo;id&amp;rdquo;: 123456, &amp;ldquo;method&amp;rdquo;: &amp;ldquo;Service.Division&amp;rdquo;, &amp;ldquo;params&amp;rdquo;: [{&amp;ldquo;A&amp;rdquo;: 88, &amp;ldquo;B&amp;rdquo;: 6}]}@@，这也令开发者不会陷于该使用 PUT 还是 POST 的问题中。在RPC服务定义中主要定义一些数据结构及其相关的处理规则。在Golang中所有注册的RPC服务方法需要满足三个条件，第一方法有一个输入参数，第二方法有一个指针类型的输出参数，第三方法返回一个error类型的返回值，满足这三个条件即可注册为RPC服务方法。在Golang中如何使用请看以下内容&amp;hellip;
+示例项目目录结构 1 2 3 4 5 6 7 8 9 10 11 12 $ tree . ├── README.md ├── client │ └── demo │ └── demo.go ├── server │ └── demo │ └── demo.</description>
+    </item>
+    
+    <item>
+      <title>Golang格式化文件大小到可视化大小</title>
+      <link>https://shaichunfeng.com/post/2020/05/09/golang-formats-file-size-to-visual-size/</link>
+      <pubDate>Sat, 09 May 2020 22:59:44 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2020/05/09/golang-formats-file-size-to-visual-size/</guid>
+      <description>在Golang中一个文件大小一般是int64类型的整数，这个类型的对程序而言是好的，不过如果提供前端展示性的数据的话，直接返回过去多少有点太那什么了&amp;hellip;&amp;hellip;这个还需要你和前端同学协商，不官怎么说总得有一方去处理，那这么Go在如何优雅的处理这个转换过程序呢？
+可定义如下函数以进行转换操作：
+1 2 3 4 5 6 7 8 9 10 11 12 13 // ByteCountBinary format byte size to human readable format. func ByteCountBinary(size int64) string { const unit int64 = 1024 if size &amp;lt; unit { return fmt.Sprintf(&amp;#34;%dB&amp;#34;, size) } div, exp := unit, 0 for n := size / unit; n &amp;gt;= unit; n /= unit { div *= unit exp++ } return fmt.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LibreOffce on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/libreoffce/</link>
+    <description>Recent content in LibreOffce on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Sun, 13 Jun 2021 12:04:58 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/libreoffce/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux 安装 LibreOffice</title>
+      <link>https://shaichunfeng.com/post/2021/06/13/linux-install-libreoffice/</link>
+      <pubDate>Sun, 13 Jun 2021 12:04:58 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/06/13/linux-install-libreoffice/</guid>
+      <description>LibreOffice是由文档基金会开发的自由及开放源代码的办公室套件。LibreOffice套件包含文字处理器、电子表格、演示文稿程序、矢量图形编辑器和图表工具、数据库管理程序及创建和编辑数学公式的应用程序。
+Section1、下载LibreOffice 到LibreOffice官网进行下载。
+如上图所示选择操作系统类型为Linux(64-bit)(rpm)，然后下载 7.0.6 LTS 版本，然后上传到服务。如果您不想这么操作，可以在跳转的下载页面复制下载链接到服务器上使用wget工具进行下载，都是可以的，怎么方便怎么来嘛~
+1 bash-4.4# wget https://download.documentfoundation.org/libreoffice/stable/7.0.6/rpm/x86_64/LibreOffice_7.0.6_Linux_x86-64_rpm.tar.gz 下载后的LibreOffice软件RPM安装如下所示：
+1 2 3 bash-4.4# ll -h 总用量 251M -rw-r--r-- 1 root root 251M 5月 7 19:37 LibreOffice_7.0.6_Linux_x86-64_rpm.tar.gz Section2、下载内建帮助RPM包 1 bash-4.4# tar -zxvf LibreOffice_7.0.6_Linux_x86-64_rpm.tar.gz 解压后的目录结构如下，会将 LibreOffice_7.0.6_Linux_x86-64_rpm.tar.gz 归案文件解压到 LibreOffice_7.0.6.2_Linux_x86-64_rpm 目录。
+1 2 3 4 bash-4.4# ll -h 总用量 251M drwxr-xr-x 4 root root 4.</description>
+    </item>
+    
+  </channel>
+</rss>

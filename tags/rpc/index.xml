@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RPC on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/rpc/</link>
+    <description>Recent content in RPC on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Mon, 11 May 2020 23:20:55 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/rpc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Golang JSON RPC 使用</title>
+      <link>https://shaichunfeng.com/post/2020/05/11/golang-json-rpc-use/</link>
+      <pubDate>Mon, 11 May 2020 23:20:55 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2020/05/11/golang-json-rpc-use/</guid>
+      <description>JSON-RPC，是一个无状态且轻量级的远程过程调用传送协议，其传递内容主要以JSON数据为主，相较于一般的 RESTFul 通过 URL 地址，如 GET /student 调用远程服务器，JSON-RPC直接在内容中定义了想要调用的方法名称如，@@{&amp;ldquo;id&amp;rdquo;: 123456, &amp;ldquo;method&amp;rdquo;: &amp;ldquo;Service.Division&amp;rdquo;, &amp;ldquo;params&amp;rdquo;: [{&amp;ldquo;A&amp;rdquo;: 88, &amp;ldquo;B&amp;rdquo;: 6}]}@@，这也令开发者不会陷于该使用 PUT 还是 POST 的问题中。在RPC服务定义中主要定义一些数据结构及其相关的处理规则。在Golang中所有注册的RPC服务方法需要满足三个条件，第一方法有一个输入参数，第二方法有一个指针类型的输出参数，第三方法返回一个error类型的返回值，满足这三个条件即可注册为RPC服务方法。在Golang中如何使用请看以下内容&amp;hellip;
+示例项目目录结构 1 2 3 4 5 6 7 8 9 10 11 12 $ tree . ├── README.md ├── client │ └── demo │ └── demo.go ├── server │ └── demo │ └── demo.</description>
+    </item>
+    
+  </channel>
+</rss>

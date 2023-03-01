@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Safe on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/categories/safe/</link>
+    <description>Recent content in Safe on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Fri, 20 Aug 2021 12:12:35 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/categories/safe/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>撞库攻击</title>
+      <link>https://shaichunfeng.com/post/2021/08/20/credential-stuffing-attacks/</link>
+      <pubDate>Fri, 20 Aug 2021 12:12:35 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/08/20/credential-stuffing-attacks/</guid>
+      <description>撞库攻击可能会使个人和企业数据面临严重风险。在这里，我们将进一步了解撞库攻击，如何进行检测和防范，以及为什么它们对企业和个人都构成如此大的威胁。
+什么是撞库？ 撞库攻击是网络犯罪分子试图使用一组帐密同时访问多个帐户。撞库之所以如此有效，是因为近三分之二的互联网用户重复使用他们的密码。网络犯罪分子在几分钟或几个小时的时间内即可将被盗的帐密输入数千个网站，从社交媒体帐户到公司专有软件等，都会受到影响。
+撞库攻击的原理是什么？ 撞库攻击取决于密码的重复使用。由于有很多人将密码重复用于多个帐户，因此仅凭一组帐密足以暴露其大部分或全部帐户。网络犯罪分子利用僵尸网络等工具在多个设备上执行多条战线攻击，只需一组帐密即可扩展攻击能力。
+据估计，大约 80% 的数据入侵 都与泄露密码有关，这就引出了一个问题：为什么这么多人仍然使用一个密码来管理他们的帐户？
+当攻击者成功进行撞库攻击后，他们就有可能可以控制用户的银行信息、社交媒体帐户等。这可能直接导致金钱或其他资产被盗、敲诈勒索或身份盗窃。
+撞库与密码喷洒 撞库和密码喷洒类似，但密码喷洒取决于用户名，而不是整套帐密。密码喷洒涉及使用经过验证的用户名，并将其与一些不同的常见密码组合尝试用于多个帐户。如果用户没有养成良好的密码习惯，则通过猜测常见密码可能会危及其大多数或全部帐户。
+如何检测撞库攻击 及早检测到撞库攻击可以给您足够的时间做出反应并保护您的帐户。方法如下：
+对于个人用户 检测撞库攻击非常简单，只需对每个帐户进行两步验证/多步验证即可。如果您的帐户可能被篡改，您将收到警报，并且要求提供一组额外的凭据才能登录帐户。
+对于企业用户 用于机器人流量的异常检测器。 这些工具有助于检测传入网络流量的异常情况，并在有机器人程序传入时通知您。撞库依赖于能够快速输入帐密的自主机器人，因此检测它们可及早采取措施。 定期扫描泄露数据库检查共用登录。 执行包括扫描数据库在内的常规系统维护可以提供预警，并可能减少数据泄露造成的损失。 使用设备和浏览器指纹。 生物识别凭据可提供高强度的唯一登录。密码与生物识别帐密相结合可以使帐户安全性强 10 倍。 监视 VPN。 如何防范撞库攻击 对于个人用户 尽可能使用多步验证/两步验证 了解密码安全 使用密码管理程序自动生成高强度随机密码，确保登录帐密安全 不要重复使用密码 使用复杂的安全问题和可靠的登录帐密 对于企业用户 为所有公司帐户实施多步验证/两步验证 在登录页面使用 CAPTCHA 在全公司范围提升密码和网络安全教育 制定严格的网络安全政策 限制源于自主系统编号的流量 使用 Web 应用防火墙 (WAF) 使用 IP 块列表限制身份验证请求/登录尝试 从 Web 信息/历史记录中保留已知不良 IP 的运行列表/块 相关参考 Keeper 撞库攻击指南 </description>
+    </item>
+    
+    <item>
+      <title>漏洞原理</title>
+      <link>https://shaichunfeng.com/post/2021/08/20/exploits-principle/</link>
+      <pubDate>Fri, 20 Aug 2021 10:30:37 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/08/20/exploits-principle/</guid>
+      <description>文件上传漏洞 导致该漏洞的原因在于代码作者没有对访客提交的数据进行检验或者过滤不严，可以直接提交修改过的数据绕过扩展名的检验。
+1、前端JavaScript过滤绕过
+如果想要在一个开启了JavaScript验证的网站上传一句话木马，我们可以给浏览器设置代理，127.0.0.1，端口为8080.利用BurpSuite软件代理-&amp;gt;打开intercept(拦截)-&amp;gt;将木马的后缀名改为jpg格式-&amp;gt;点击forward将数据包发回，这样就可以上传成功。最后用菜刀连接。 还有一种方法就是在地址栏输入：about:config，搜索javascript:enabled,双击关闭，也可以成功。
+2、Content-Type绕过
+Content-Type一般是指网页中存在的Content-Type，用于定义网络文件的类型和网页的编码，决定文件接收方将以什么形式、什么编码读取这个文件。 如果想要在一个有type验证的网站上传一句话木马，我们可以给浏览器设置代理，127.0.0.1，端口为8080.利用BurpSuite软件代理-&amp;gt;打开intercept(拦截)-&amp;gt;修改包内的Content-Type值：将application/octet-stream修改为image/jpeg。-&amp;gt;点击forward将数据包发回，这样就可以上传成功。
+3、扩展名绕过
+如果想要绕过有扩展名验证的网站上传一句话木马，这个很简单，可以把后缀换成大小写的方式绕过。
+4、00截断绕过
+想通过00%截断来绕过有验证的网站上传一句话木马。将上传的文件名命名为test.php%00.jpg格式，我们可以给浏览器设置代理，127.0.0.1，端口为8080.利用BurpSuite软件代理-&amp;gt;打开intercept(拦截)-&amp;gt;修改包内的Content-Type值：将%00右击选择Covert selection选项中的URL进行编码-&amp;gt;点击forward将数据包发回，这样就可以上传成功。注：系统在对文件名的读取时，如果遇到%00，就会认为读取已结束，不在读取后面的内容。
+解析漏洞 文件包含漏洞 XSS跨站脚本攻击 CSRF 目录遍历漏洞 命令执行漏洞 代码执行漏洞 反序列化漏洞 参考链接 常见漏洞原理简介 </description>
+    </item>
+    
+  </channel>
+</rss>

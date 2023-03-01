@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>time on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/time/</link>
+    <description>Recent content in time on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Sun, 19 Sep 2021 16:38:01 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/time/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux服务器设置时间</title>
+      <link>https://shaichunfeng.com/post/2021/09/19/linux-server-settings-time/</link>
+      <pubDate>Sun, 19 Sep 2021 16:38:01 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/09/19/linux-server-settings-time/</guid>
+      <description>Linux服务器新安装系统时区有可能不正确，直接导致的结果就是所有产生的数据所使用的时间都不是本地时间，对数据的影响比较大，因为时区不正嘛，所以也就会出来这种情况。Linux服务器的时间设置，可以通过手动配置也可以通过网络进行同步，还可以通过修改系统的时区来达到我们的预期。
+修改时区 通过修改时区的方式有两种方式，一种是即时生效，一种是重启生效。
+即时生效 可以使用系统预置的时区文件中的 Shanghai 文件，对 /etc/localtime 文件进行覆盖操作：
+1 $ sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 修改之后可以通过date命令进行确认是否生效：
+1 2 $ sudo date 2021年 09月 19日 星期日 16:58:43 CST 重启生效 再一种方式是通过修改系统时钟配置文件@@/etc/sysconfig/clock@@来修改系统时间配置。</description>
+    </item>
+    
+  </channel>
+</rss>

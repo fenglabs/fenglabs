@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tool on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/tool/</link>
+    <description>Recent content in tool on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Thu, 27 May 2021 10:09:51 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/tool/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Makefile快速入门</title>
+      <link>https://shaichunfeng.com/post/2021/05/27/makefile-simple-use/</link>
+      <pubDate>Thu, 27 May 2021 10:09:51 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/05/27/makefile-simple-use/</guid>
+      <description>可以这么理解Makefile是用于管理项目的一种工具，它来自GNU，比如您呢好在项目下使用docker-compose工具运行容器，这个时候呢，您一般会输入docker-compose -f docker-compose.yaml up -d 进行项目容器的启动，如果您要把这个容器及网卡等一系列与这个容器服务相关的服务也停止掉的话，您会执行 docker-compose down 命令进行操作，这很好，您如果不嫌麻烦的话您可以先停止掉依赖的网卡了（如果有的话），然后再停止掉容器，这样也是可以的，不过呢，您有没有感觉这么一来，就会很麻烦，Makefile给我们来解决这些个麻烦，您只需要在项目目录下添加一个Makefile即可给您带来极大的方便，如果我们有多个容器要管理的话这个方便之处简直会让您为之大叫~
+二、如何编写Makefile？ 我们来说一下就上面我们使用docker-compose管理容器时执行的一系列命令如果让Makefile为我们执行，废话不多话，写一个Makefile，来说明！
+2.1、添加Makefile 在您的项目目录下添加一个Makefile
+1 $ touch Makefile 2.2、编写Makefile命令 在这个Makefile中我们编写以下代码：
+1 2 3 4 5 6 7 .PHONY: docker-compose-up docker-compose-up: docker-compose -f docker-compose.yaml up -d .PHONY: docker-compose-down docker-compose-down: docker-compose down 以上呢我们添加了两个伪命令，这两个伪命令就可以为我们执行容器的启动与停止操作。定义一个伪命令以 .PHONY: 开头，后面就是伪命令名称，然后另起一行，顶格声明这个伪命令以冒号:结尾，然后再另起一行输入这个伪命令要执行的命令，注意要有一个TAB键的缩进，每一个要执行的命令要占一行！这样就声明了一个Makefile伪命令了！
+注意：我们一直说它是伪命令，这是相对于系统级别命令而言的命令，所以它在Makefile也只能算是伪命令了！
+三、如果使用？ 这些在Makefile文件中定义的伪命令不能像系统级别的命令那样直接输入：
+1 $ docker-compose-up 这样执行，系统它不认识它哦！要使用 make 加伪命令的形式才可以：</description>
+    </item>
+    
+  </channel>
+</rss>

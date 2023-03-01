@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RegExp on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/regexp/</link>
+    <description>Recent content in RegExp on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Fri, 18 Jun 2021 22:53:56 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/regexp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>正则表达式用例</title>
+      <link>https://shaichunfeng.com/post/2021/06/18/regular-expression-use-case/</link>
+      <pubDate>Fri, 18 Jun 2021 22:53:56 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/06/18/regular-expression-use-case/</guid>
+      <description>匹配多个字符 匹配多个空格 1 \s+ 可以将包含一个或多个的空格统一处理为一个空格，如有如下字符串：
+1 2 $ ll drwx------@ 3 helloshaohua staff 96B 1 29 09:48 Applications </description>
+    </item>
+    
+  </channel>
+</rss>

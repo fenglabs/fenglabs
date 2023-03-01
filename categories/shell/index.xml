@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shell on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/categories/shell/</link>
+    <description>Recent content in Shell on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Tue, 25 May 2021 01:34:23 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/categories/shell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用Shell脚本新建博文生成多个语言Markdown文件</title>
+      <link>https://shaichunfeng.com/post/2021/05/26/shell-scirpt-code-structure/</link>
+      <pubDate>Tue, 25 May 2021 01:34:23 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/05/26/shell-scirpt-code-structure/</guid>
+      <description>在使用Hugo写博客的时候，添加一遍博文，如果内容是支持多语言的话，添加每种语言markdown文件都需要执行一次Hugo命令，着实非常不方便，于是乎写一个Shell脚本就可以解决这个非常不愉快的操作体验，具体可以写一个Shell脚本去一次性的完成这个重复而没有任何意义的操作。仔细分析一下这个要写的Shell脚本，其实非常简单就可以实现: 定义一个目录常量，定义一语言数组，让用户输入三个参数，其中前两个是必传参数，最后一个参数是可选参数，依次表示，要生成的markdown文件存放目录，markdown文件名，以及是否要使用日期目录。
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 #!</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>filter on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/filter/</link>
+    <description>Recent content in filter on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Tue, 13 Jul 2021 15:34:42 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/filter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wireshark文档 | Wireshark 过滤器</title>
+      <link>https://shaichunfeng.com/post/2021/07/13/wireshark-related-use/</link>
+      <pubDate>Tue, 13 Jul 2021 15:34:42 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/07/13/wireshark-related-use/</guid>
+      <description>Wireshark 和 TShark 共享一个强大的过滤引擎，有助于消除数据包跟踪中的噪音，让您只看到您感兴趣的数据包。如果数据包满足过滤器中表达的要求，则它会显示在数据包列表中。显示过滤器让您可以将协议中的字段与特定值进行比较，将字段与字段进行比较，并检查指定的字段或协议是否存在。
+检查字段或协议是否存在 最简单的过滤器允许您检查协议或字段是否存在。如果您想查看所有包含 IP 协议的数据包，过滤器将是ip。要查看包含令牌环 RIF 字段的所有数据包，请使用tr.rif。
+将过滤器中的协议或字段视为隐式具有“存在”运算符。
+比较运算符 字段也可以与值进行比较。比较运算符可以通过类似英文的缩写或类似 C 语言的符号表示：
+1 2 3 4 5 6 7 8 运算符 描述 ——————————————————————————————————————————— eq, == (等于)Equal ne, != (不等于)Not Equal gt, &amp;gt; (大于)Greater Than lt, &amp;lt; (小于)Less Than ge, &amp;gt;= (大于等于)Greater than or Equal to le, &amp;lt;= (小于等于)Less than or Equal to 搜索和匹配操作符 其他运算符仅以英语表达，而不是类似 C 语言的语法：</description>
+    </item>
+    
+  </channel>
+</rss>

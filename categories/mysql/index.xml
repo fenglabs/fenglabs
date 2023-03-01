@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MYSQL on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/categories/mysql/</link>
+    <description>Recent content in MYSQL on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Sat, 03 Jul 2021 19:30:17 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/categories/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MYSQL创建新用户并赋于权限</title>
+      <link>https://shaichunfeng.com/post/2021/07/03/mysql-creates-a-new-user-and-grants-permissions/</link>
+      <pubDate>Sat, 03 Jul 2021 19:30:17 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/07/03/mysql-creates-a-new-user-and-grants-permissions/</guid>
+      <description>为应用程序创建特定的用户特定的数据库，不要直接使用root用户直接在应用程序中执行数据库操作，如果条件允许请将root用户设置为禁止远程登录，以提高系统的安全性，通常情况下，在开发或测试时可以将环境中的MYSQL设置为允许远程登录，以提高开发或上线效率，生产环境下是严禁MYSQL数据库远程登录的，应用程序应该通过内部网络进行通信完成数据的相关操作。特定的用户只对特定数据库有权限，退一万步讲，即使特定用户的密码被破解，也不会对同一节点下的数据库造成什么影响，还有千万不要使用弱口令，下文中的 @@helloworld@@ 是演示说明使用，可以忽略不计~
+Step1.以root用户登录MYSQL 1 2 3 4 5 6 7 8 9 10 11 12 13 $ mysql -u root -p Enter password: Welcome to the MySQL monitor. Commands end with ; or \g. Your MySQL connection id is 16 Server version: 8.0.23 MySQL Community Server - GPL Copyright (c) 2000, 2021, Oracle and/or its affiliates.</description>
+    </item>
+    
+    <item>
+      <title>[转载]Mysql Explain</title>
+      <link>https://shaichunfeng.com/post/2020/05/15/mysql-explain/</link>
+      <pubDate>Fri, 15 May 2020 00:10:43 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2020/05/15/mysql-explain/</guid>
+      <description>在日常工作中，我们有时会开慢查询去记录一些执行时间比较久的SQL语句，找出这些SQL语句并不意味着完事了，些时我们常常用到explain这个命令来查看一个这些SQL语句的执行计划，查看该SQL语句有没有使用上了索引，有没有做全表扫描，这都可以通过explain命令来查看。所以我们深入了解MySQL的基于开销的优化器，还可以获得很多可能被优化器考虑到的访问策略的细节，以及当运行SQL语句时哪种策略预计会被优化器采用。（QEP：sql生成一个执行计划query Execution plan）。
+1 2 3 4 5 6 7 mysql&amp;gt; explain select * from servers; +----+-------------+---------+------+---------------+------+---------+------+------+-------+ | id | select_type | table | type | possible_keys | key | key_len | ref | rows | Extra | +----+-------------+---------+------+---------------+------+---------+------+------+-------+ | 1 | SIMPLE | servers | ALL | NULL | NULL | NULL | NULL | 1 | NULL | +----+-------------+---------+------+---------------+------+---------+------+------+-------+ row in set (0.</description>
+    </item>
+    
+    <item>
+      <title>获取当前查询记录的上一条记录和下一条记录ID</title>
+      <link>https://shaichunfeng.com/post/2020/05/12/gets-the-previous-record-and-the-next-record-id-of-the-current-query-record/</link>
+      <pubDate>Tue, 12 May 2020 23:28:49 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2020/05/12/gets-the-previous-record-and-the-next-record-id-of-the-current-query-record/</guid>
+      <description>比如有这么一个需求，获取当前文章记录数据并且返回当前记录的上一条记录ID和下一条记录ID，用于前端文章详情页的上一篇和下一篇文章获取，其实也特别的简单，顺便记录一下！
+简略数据源如下：
+查询分析 要获取当前查询记录ID为1000的记录的上一条记录ID: 999，可以在ID小于1000的范围内获取ID最大值；获取下一条记录ID: 1001，可以在大于1000的范围内获取ID最小值，那么这个事件也就算是完成了！
+注意：获取上一条记录ID和下一条记录ID的临界点就是当前查询记录ID为1000的记录哦~
+获取上一条记录ID 1 2 3 4 5 6 7 mysql&amp;gt; select max(id) as last_id from article where id &amp;lt; 1000; +---------+ | last_id | +---------+ | 999 | +---------+ 1 row in set (0.00 sec) 获取下一条记录ID 1 2 3 4 5 6 7 mysql&amp;gt; select min(id) as next_id from article where id &amp;gt; 1000; +---------+ | next_id | +---------+ | 1001 | +---------+ 1 row in set (0.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>server on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/server/</link>
+    <description>Recent content in server on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Mon, 18 May 2020 23:01:53 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/server/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Golang 搭建的服务器局域网不能访问?</title>
+      <link>https://shaichunfeng.com/post/2020/05/18/can-not-access-the-server-lan-built-by-go/</link>
+      <pubDate>Mon, 18 May 2020 23:01:53 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2020/05/18/can-not-access-the-server-lan-built-by-go/</guid>
+      <description>在Go项目中如果你想在局域网访问Go运行的服务器，那么就不应该指定其地址为 localhost:port 或者 127.0.0.1:port，应该指定为 :port 或 0.0.0.0:port 的形式！为什么呢？
+说整明白这是怎么回事，这时候就是考验你网络基础的时候了，上大学的时候计算机专业都是有学过的哦(《计算机网络》想起来了吧)，来复习一下几个概念：
+本地环回地址 域名解析 默认路由 何为本地环回地址 运用本地环回机制，便可在主机上运行网络服务，期间不须安装实体网络接口卡(也就是物理网卡)，也无须将该服务开放予主机所在的网络。例如，在设置好本地安装的网站后，可通过 http://localhost 这一网址，来访问本地网站！
+域名解析一般会将localhost解析为IPv4本地环回地址 127.0.0.1 和IPv6本地环回地址 [::1]。
+localhost是一个在计算机网络中用于表示 &amp;ldquo;此计算机&amp;rdquo; 的主机名。它被用于通过本地环回网络接口，来访问本机运行的服务，并且将会绕过任何物理网络接口硬件。—维基百科
+何为域名解析 简单粗暴的解释就是从IP到域名转换。
+由以上概念可知，localhost或127.0.0.1只能在本地主机里玩耍，玩的再嗨别的主机也不知道你玩什么，那么怎么也让别的主机知道你在玩什么呢? 或者说访问本地主机跑的服务，那这个时候就需要在复习一下什么是默认路由哦~
+何为默认路由 默认路由(Default route)，是对IP数据包中的目的地址找不到存在的其他路由时，路由器所选择的路由。目的地不丰路由器的路由表里的所有数据包都会使用默认路由。这条路由一般会连去另一个路由器，而这个路由器也同样处理数据包；如果知道应该怎么路由这个数据包，则数据包会被转发到已知的路由；否则，数据包会被转发到默认路由，从而到达另一个路由器。每次转发，路由都增加了一跳的距离。当到达了一个知道如何到达目的地址的路由器时，这个路由器就会根据最长前缀匹配来选择有效的路由。子网掩码匹配目的IP地址而且又最长的网络会被选择。用无类别域间路由标记表示的IPv4默认路由是0.0.0.0/0。—维基百科
+由上可知 0.0.0.0 为默认路由，要想局域网内的其它主机访问当前主机要必须使用默认路由而不能使用localhost或127.0.0.1， :port 表示的就是0.0.0.0、localhost、127.0.0.1 之和，所示说，当前启动一个Go服务器的时候，要么明确指定 0.0.0.0:port 要么指定 :port 局域网内的其它主机方可访问到~
+Go服务示例 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 package main import ( &amp;#34;github.</description>
+    </item>
+    
+  </channel>
+</rss>

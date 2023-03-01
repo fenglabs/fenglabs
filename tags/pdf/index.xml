@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PDF on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/pdf/</link>
+    <description>Recent content in PDF on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Sun, 13 Jun 2021 11:13:43 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/pdf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>从Linux转换PDF到Word</title>
+      <link>https://shaichunfeng.com/post/2021/06/13/convert-pdf-to-word-from-linux/</link>
+      <pubDate>Sun, 13 Jun 2021 11:13:43 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/06/13/convert-pdf-to-word-from-linux/</guid>
+      <description>如果您在 GNU / Linux 上将其与 Wine 一起使用，那么您肯定已经知道如何使用 Microsoft 办公套件中包含的功能将原生 Microsoft Office 文档转换为 PDF。即使您使用 LibreOffice 或其他办公套件，由于已经包含此类套件的工具，您也可以轻松地将文档转换为 PDF 以更舒适的方式共享它。在您不得不使用其他工具来执行此操作之前，某些插件已经出现，最后它们已经集成到套件中。
+但这不是我们在本文中将要解释的，而是我们感兴趣的是相反的过程，即将 PDF 转换为 Word 文档或 LibreOffice，无论是 .doc、.docx 等。 虽然它不是典型的作为我在第一段中解释的反向转换，有很多人需要将PDF文档转换为更友好的格式来编辑它们。这就是为什么我们要解释将 PDF 转换为 Word 的简单步骤。
+PDF 和其他格式有什么区别： PDF 代表 Portable Document Format，即一种可移植的文档格式。它由 Adob​​e Systems 开发，目前是最流行的格式之一，因为它独立于我们使用的软件和硬件平台，因此是可移植的。这意味着我们将能够可视化来自几个非常不同的操作系统和程序的内容，这使得它成为访问现有异构计算机的互联网之王。
+它变得如此重要，以至于它在 2008 年在 ISO 32000-1 下标准化，但并非所有优点，如便携性、易于查看、小尺寸和个性化配置，它也有其隐藏的面孔。例如，这些 PDF 文件的版本涉及购买付费软件，例如专业版的 Adob​​e Acrobat 产品。如果没有特定软件，很难编辑或不可能进行编辑，因此很难使用它，这就是为什么我们将在本教程中教您将其转换为可编辑文档的原因。</description>
+    </item>
+    
+    <item>
+      <title>MacOS环境在终端使用Libreoffice的soffice命令</title>
+      <link>https://shaichunfeng.com/post/2021/06/11/make-soffice-of-libreoffice-work-on-macos/</link>
+      <pubDate>Fri, 11 Jun 2021 19:27:40 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/06/11/make-soffice-of-libreoffice-work-on-macos/</guid>
+      <description>由于业务需要，需要将PDF文档转换为Word文档，这种类似的工具软件比较多，如OpenOffice、LibreOffice、Abiword等，都是可以的，使用的话主要是在服务器上使用，本地一般用个WPSOffice就够用了，因为要在本地开发调试，所以为了方便起见需要在MacOS系统安装 LibreOffice ，安装之后你会发现这个工具，没有默认支持终端下使用命令的功能。在程序中完成文档的格式转换就需要调用命令，需要手动去设置shell脚本访问 soffice 这个命令，当然，你也可以使用全路径就调用这个 soffice 命令，当然，话有说回来既然就能看到这篇博文说明你也在找类型的解决方案，来吧，来看一下具体怎么设置，其实也非常简单~
+创建Shell脚本 在 /usr/local/bin 目录下创建一个名为 soffice 的Shell脚本，并添加以下内容：
+1 2 3 4 5 #!/bin/bash # 需要这样做，因为符号链接不起作用， # 因为它抱怨包含了一些 .plist 文件。 /Applications/LibreOffice.app/Contents/MacOS/soffice &amp;#34;#@&amp;#34; 赋予可执行权限 1 $ sudo chmod +x /usr/local/bin/soffice 用法 </description>
+    </item>
+    
+  </channel>
+</rss>

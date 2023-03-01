@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>use on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/use/</link>
+    <description>Recent content in use on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Sat, 12 Jun 2021 10:09:55 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/use/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mac使用技巧</title>
+      <link>https://shaichunfeng.com/post/2021/06/12/mac-using-skills/</link>
+      <pubDate>Sat, 12 Jun 2021 10:09:55 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/06/12/mac-using-skills/</guid>
+      <description>MacOS使用过程中遇到的各种问题汇总。
+Mac Big Sur 清除DNS缓存 1 $ sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder </description>
+    </item>
+    
+  </channel>
+</rss>

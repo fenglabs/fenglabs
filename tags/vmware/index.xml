@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vmware on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/vmware/</link>
+    <description>Recent content in vmware on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Thu, 16 Sep 2021 11:54:58 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/vmware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MacOS使用VMware安装rockylinux</title>
+      <link>https://shaichunfeng.com/post/2021/09/16/mac-use-vmware-install-rackylinux/</link>
+      <pubDate>Thu, 16 Sep 2021 11:54:58 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/09/16/mac-use-vmware-install-rackylinux/</guid>
+      <description>在MacOS系统下安装rockylinux首先就是需要安装一个虚拟机，MacOS系统虚拟机产品有 VMware、VirtualBox、PD可供选择使用，VirtualBox 是开源免费产品，不过在MacOS下个人使用的过程中感觉不够完美，PD 和 VMware 是收费产品，现阶段 PD 对 M1 处理器支持的比较好，不过好在 VMware 有一个 VMware Fusion Player 版本，可供个人使用，一直在使用感觉还不错，并且可以使用 vmrun 终端工具管理虚拟机非常方便。安装 VMware Fusion Player 之后需要安装 rockylinux，虚拟机安装@@Linux@@操作系统跟物理机没有什么差别，下面操作步骤中会说。最后想简单说明一下 vmware 虚拟机软件提供的 vmrun 终端工具如何使用，接下来进行详情说明~
+Step1、安装VMware VMware Fusion Player 可以到 VMware 官网进行下载。
+下载需要登录用户，如果没有账号请先注册一个，登录之后可以看到如下页面:
+单点下载 Manually Download 下载就可以了，并且还有一个 LICENSE KEYS 拷贝下来保存到本地文件中或其它存储介质均可。
+安装的话也比较简单只需要双击下载下来的 VMware-Fusion-12.1.2-17964953.dmg 文件，一直点击 next 即可，然后到输入 LICENSE KEYS 的页面时，将拷贝下来的 LICENSE KEYS 内容粘贴输入框激活即可。</description>
+    </item>
+    
+  </channel>
+</rss>

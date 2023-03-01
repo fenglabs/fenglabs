@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VUE on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/categories/vue/</link>
+    <description>Recent content in VUE on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Sun, 10 May 2020 23:12:49 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/categories/vue/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>axios如何获取HTTP响应头数据?</title>
+      <link>https://shaichunfeng.com/post/2020/05/10/how-does-axios-get-http-response-header-data/</link>
+      <pubDate>Sun, 10 May 2020 23:12:49 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2020/05/10/how-does-axios-get-http-response-header-data/</guid>
+      <description>说到如何获取HTTP响应头数据，就不得到说一下对于CORS请求，默认情况下，浏览器只能访问 Cache-Control、Content-Language、Content-Type、Expires、Last-Modified、Pragma 这些Header头，那如果想访问服务器端自定义的Header头应该如何处理呢？
+如果像axios这种请求工具想获取到HTTP自定义响应头如 X-Access-Token， 那么服务端首先应该对响应头 Access-Control-Expose-Headers 字段进行定义，如：Access-Control-Expose-Headers: X-Access-Token，axios就可以根据headers属性获取到HTTP自定义响应头数据。</description>
+    </item>
+    
+  </channel>
+</rss>

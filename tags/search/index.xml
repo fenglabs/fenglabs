@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>search on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/search/</link>
+    <description>Recent content in search on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Thu, 27 May 2021 10:42:40 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/search/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ElasticSearch日常开发使用</title>
+      <link>https://shaichunfeng.com/post/2021/05/27/elasticsearch-use-logging/</link>
+      <pubDate>Thu, 27 May 2021 10:42:40 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/05/27/elasticsearch-use-logging/</guid>
+      <description>:::tip 在CentOS上安装Headless Chromium的分步指南。 :::
+索引操作 索引(也就是index)的常用的相关操作包括：新建索引、删除索引、
+如何新建索引? 新建索引， 可以直接向 ElasticSearch 服务器发送 PUT 请求。例如，下面的例子是新建一个名为 users 的索引。
+1 curl -XPUT &amp;#34;http://localhost:9200/users?pretty=true&amp;#34; 服务器将返回一个JSON对象，其中 acknowledged 代表是否操作成功，shards_acknowledged 是否分片成功，index 表示操作的索引名称，当前就是 users。
+1 2 3 4 5 { &amp;#34;acknowledged&amp;#34; : true, &amp;#34;shards_acknowledged&amp;#34; : true, &amp;#34;index&amp;#34; : &amp;#34;users&amp;#34; } 如何删除索引？ 删除索引，直接向 ElasticSearch 服务器发送 DELETE 请求，即可删除索引。例如，下面的例子是删除一个名为 users 的索引。
+1 curl -XDELETE &amp;#34;http://localhost:9200/users?</description>
+    </item>
+    
+  </channel>
+</rss>

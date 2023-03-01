@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>panic on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/panic/</link>
+    <description>Recent content in panic on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Mon, 19 Jul 2021 08:00:13 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/panic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go系列教程（三十二） | panic 和 recover(Panic and Recover)</title>
+      <link>https://shaichunfeng.com/post/2021/07/19/32-panic-and-recover.md/</link>
+      <pubDate>Mon, 19 Jul 2021 08:00:13 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/07/19/32-panic-and-recover.md/</guid>
+      <description>什么是 panic？ 在 Go 语言中，程序中一般是使用错误来处理异常情况。对于程序中出现的大部分异常情况，错误就已经够用了。
+但在有些情况，当程序发生异常时，无法继续运行。在这种情况下，我们会使用 panic 来终止程序。当函数发生 panic 时，它会终止运行，在执行完所有的延迟函数后，程序控制返回到该函数的调用方。这样的过程会一直持续下去，直到当前协程的所有函数都返回退出，然后程序会打印出 panic 信息，接着打印出堆栈跟踪（Stack Trace），最后程序终止。在编写一个示例程序后，我们就能很好地理解这个概念了。
+在本教程里，我们还会接着讨论，当程序发生 panic 时，使用 recover 可以重新获得对该程序的控制。
+可以认为 panic 和 recover 与其他语言中的 try-catch-finally 语句类似，只不过一般我们很少使用 panic 和 recover。而当我们使用了 panic 和 recover 时，也会比 try-catch-finally 更加优雅，代码更加整洁。
+什么时候应该使用 panic？ 需要注意的是，你应该尽可能地使用错误，而不是使用 panic 和 recover。只有当程序不能继续运行的时候，才应该使用 panic 和 recover 机制。
+panic 有两个合理的用例。
+发生了一个不能恢复的错误，此时程序不能继续运行。 一个例子就是 web 服务器无法绑定所要求的端口。在这种情况下，就应该使用 panic，因为如果不能绑定端口，啥也做不了。 发生了一个编程上的错误。 假如我们有一个接收指针参数的方法，而其他人使用 nil 作为参数调用了它。在这种情况下，我们可以使用 panic，因为这是一个编程错误：用 nil 参数调用了一个只能接收合法指针的方法。 panic 示例 内建函数 panic 的签名如下所示：</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>net safe on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/categories/net-safe/</link>
+    <description>Recent content in net safe on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Sun, 23 May 2021 22:23:35 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/categories/net-safe/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TCPDUMP抓包工具</title>
+      <link>https://shaichunfeng.com/post/2021/04/29/tcpdump-climbing-package/</link>
+      <pubDate>Sun, 23 May 2021 22:23:35 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/04/29/tcpdump-climbing-package/</guid>
+      <description>Feature1、抓取默认网卡的所有数据包 1 $ tcpdump Feature2、抓取指定IP的所有数据包 1 $ tcpdump host 10.10.11.215 意思是抓取本服务器与IP10.10.11.215设备之间的通信数据包.
+Feature3、抓取指定IP及端口的所有数据包 1 $ tcpdump host 10.10.11.215 and port 7001 意思是抓取本服务器与IP 10.10.11.215 设备的 7001 端口之间的通信数据包.
+Feature4、抓取指定IP及端口的所有数据包并保存为文件以供wireshark工具分析 1 $ tcpdump host 10.10.11.215 and port 7001 -w 10.10.11.215.machine.port.7001.cap 意思是抓取本服务器与IP 10.10.11.215 设备的 7001 端口之间的通信数据包，并将数据包保存到文件 10.10.11.215.machine.port.7001.cap.</description>
+    </item>
+    
+  </channel>
+</rss>

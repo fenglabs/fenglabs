@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>goland on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/goland/</link>
+    <description>Recent content in goland on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Thu, 14 May 2020 23:57:05 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/goland/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Goland 代码自动换行</title>
+      <link>https://shaichunfeng.com/post/2020/05/14/goland-code-wraps-automatically/</link>
+      <pubDate>Thu, 14 May 2020 23:57:05 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2020/05/14/goland-code-wraps-automatically/</guid>
+      <description>IntelliJ家族的IDE在设置代码自动换行时菜单是一致的，你如果用过其中一个特定的IDE如 IDEA，那么对于其它的IntelliJ家族编辑器也同样适用~
+代码自动换行 分为单个文件或整个项目！
+单个文件 设置菜单依次是: View -&amp;gt; Active Editor -&amp;gt; Soft-Wrap
+整个项目 设置菜单依次是: Goland -&amp;gt; Preferences... -&amp;gt; Editor -&amp;gt; General -&amp;gt; Soft-Wrap，这个可以个性化定制对特定扩展名的文件进行设置自动换行！</description>
+    </item>
+    
+  </channel>
+</rss>

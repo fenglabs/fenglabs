@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>permissions on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/permissions/</link>
+    <description>Recent content in permissions on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Sat, 03 Jul 2021 19:30:17 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/permissions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MYSQL创建新用户并赋于权限</title>
+      <link>https://shaichunfeng.com/post/2021/07/03/mysql-creates-a-new-user-and-grants-permissions/</link>
+      <pubDate>Sat, 03 Jul 2021 19:30:17 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/07/03/mysql-creates-a-new-user-and-grants-permissions/</guid>
+      <description>为应用程序创建特定的用户特定的数据库，不要直接使用root用户直接在应用程序中执行数据库操作，如果条件允许请将root用户设置为禁止远程登录，以提高系统的安全性，通常情况下，在开发或测试时可以将环境中的MYSQL设置为允许远程登录，以提高开发或上线效率，生产环境下是严禁MYSQL数据库远程登录的，应用程序应该通过内部网络进行通信完成数据的相关操作。特定的用户只对特定数据库有权限，退一万步讲，即使特定用户的密码被破解，也不会对同一节点下的数据库造成什么影响，还有千万不要使用弱口令，下文中的 @@helloworld@@ 是演示说明使用，可以忽略不计~
+Step1.以root用户登录MYSQL 1 2 3 4 5 6 7 8 9 10 11 12 13 $ mysql -u root -p Enter password: Welcome to the MySQL monitor. Commands end with ; or \g. Your MySQL connection id is 16 Server version: 8.0.23 MySQL Community Server - GPL Copyright (c) 2000, 2021, Oracle and/or its affiliates.</description>
+    </item>
+    
+  </channel>
+</rss>

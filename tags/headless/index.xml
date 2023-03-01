@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>headless on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/headless/</link>
+    <description>Recent content in headless on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Thu, 27 May 2021 10:17:21 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/headless/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CentOS安装无头Chrome</title>
+      <link>https://shaichunfeng.com/post/2021/05/27/centos-install-headless-chrome/</link>
+      <pubDate>Thu, 27 May 2021 10:17:21 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/05/27/centos-install-headless-chrome/</guid>
+      <description>无头Chrome就像是在没有UI（浏览器）的情况下运行chrome浏览器一样，也就是说，它在无头环境中运行，这对于运行自动化测试非常有用。
+那么，无头Chrome可以为我们做些什么呢？
+最令人兴奋的事情之一就是能够测试最新和最强大的Web平台功能，例如ES6模块，服务工作者和流。使用无头chrome，您可以编写应用程序并使用最新的渲染功能测试这些应用程序。它解锁的另一件事是这些很棒的功能，例如网络限制，设备仿真和代码覆盖。 使用无头chrome，您甚至无需编写任何代码即可执行测试，那不是很爽！
+您可以仅通过命令行执行它们。
+1 2 3 4 $ google-chrome-stable \ --headless \ --disable-gpu \ --print-to-pdf=www.meipian.cn.pdf https://www.meipian.cn/ 1 2 3 4 $ google-chrome-stable \ --headless \ --disable-gpu \ --screenshot=www.meipian.cn.png https://www.meipian.cn/ 1 2 3 4 5 $ google-chrome-stable \ --headless \ --disable-gpu \ --dump-dom \ https://www.meipian.cn/ &amp;gt;&amp;gt; www.meipian.cn.html 以上是一些常用的功能！更多功能可以学习Chrome浏览器功能具体列表。
+Step1:更新CentOS 使用以下命令更新CentOS系统。</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cgo on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/cgo/</link>
+    <description>Recent content in cgo on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Mon, 21 Jun 2021 15:51:11 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/cgo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go语言调用C语言代码</title>
+      <link>https://shaichunfeng.com/post/2021/06/21/go-call-c/</link>
+      <pubDate>Mon, 21 Jun 2021 15:51:11 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/06/21/go-call-c/</guid>
+      <description>Go 语言除了语法精炼、并发支持好外，还有一个优点就是可以调用 C 代码。可以直接在 Go 源代码里写 C 代码，也可以引 C 语言的外部库。这样在性能遇到瓶颈的地方可以重写，或者某些功能 Go 和第三方还缺失，但 C 语言有现成的库就可以直接用了。官方 Cgo 这块目前有一篇博客 https://blog.golang.org/c-go-cgo 和 命令行文档 https://golang.org/cmd/cgo/ 对 Cgo 进行了说明，其中某些地方还不够明确或者没有提到的地方。
+Section1：Go语言内联C语言代码 下面例子是直接将 C 代码内嵌在 Go 源代码里，引入了一个不存在的包 “C”, 然后将 C 代码写在了引入上面，注意只能写在 “C” 包上面。这里定义了一个sum函数, 然后通过 C.sum 在 Go 代码里使用。
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 package main /* 内联C语言代码 Start */ // // sum calc a and b sum value.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>open on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/open/</link>
+    <description>Recent content in open on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Sat, 28 Mar 2020 22:29:03 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/open/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CentOS7开放端口号</title>
+      <link>https://shaichunfeng.com/post/2020/03/28/centos7-open-port-number/</link>
+      <pubDate>Sat, 28 Mar 2020 22:29:03 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2020/03/28/centos7-open-port-number/</guid>
+      <description>在基于RHEL7的服务器，提供了一个firewall的动态管理的防火墙，其支持IPv4和IPv6，还支持以太网桥，并有分离运行时间和永久性配置选择。它还具备一个通向服务或者应用程序以直接增加防火墙规则的接口。
+加入开放端口到配置文件 1 $ firewall-cmd --zone=public --add-port=80/tcp --permanent 参数说明：
+--zone=public: 添加时区 --add-port=80/tcp: 添加端口 --permanent: 永久生效 重新加载防火墙配置文件 以 root 身份输入以下命令，重新加载防火墙，并不中断用户连接，即不丢失状态信息.
+1 $ firewall-cmd --reload </description>
+    </item>
+    
+  </channel>
+</rss>

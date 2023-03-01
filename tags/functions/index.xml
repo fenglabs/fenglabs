@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>functions on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/functions/</link>
+    <description>Recent content in functions on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Mon, 19 Jul 2021 08:00:14 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/functions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go系列教程（三十三） | 函数是一等公民(Functions Are First Class Citizens)</title>
+      <link>https://shaichunfeng.com/post/2021/07/19/33-functions-are-first-class-citizens/</link>
+      <pubDate>Mon, 19 Jul 2021 08:00:14 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/07/19/33-functions-are-first-class-citizens/</guid>
+      <description>什么是头等（第一类）函数？ 支持头等函数（First Class Function）的编程语言，可以把函数赋值给变量，也可以把函数作为其它函数的参数或者返回值。Go 语言支持头等函数的机制。
+本教程我们会讨论头等函数的语法和用例。
+匿名函数 我们来编写一个简单的示例，把函数赋值给一个变量。
+1 2 3 4 5 6 7 8 9 10 11 12 13 package main import ( &amp;#34;fmt&amp;#34; ) func main() { a := func() { fmt.Println(&amp;#34;hello world first class function&amp;#34;) } a() fmt.Printf(&amp;#34;%T&amp;#34;, a) } 在 playground 上运行
+在上面的程序中，我们将一个函数赋值给了变量 a（第 8 行）。这是把函数赋值给变量的语法。你如果观察得仔细的话，会发现赋值给 a 的函数没有名称。由于没有名称，这类函数称为匿名函数（Anonymous Function）。</description>
+    </item>
+    
+  </channel>
+</rss>

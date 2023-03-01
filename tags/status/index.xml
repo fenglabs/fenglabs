@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>status on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/status/</link>
+    <description>Recent content in status on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Mon, 19 Jul 2021 08:00:08 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/status/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go系列教程（二十七） | 组合替代继承(Combination Replaces Inheritance)</title>
+      <link>https://shaichunfeng.com/post/2021/07/19/27-combination-replaces-inheritance/</link>
+      <pubDate>Mon, 19 Jul 2021 08:00:08 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/07/19/27-combination-replaces-inheritance/</guid>
+      <description>Go 不支持继承，但它支持组合（Composition）。组合一般定义为“合并在一起”。汽车就是一个关于组合的例子：一辆汽车由车轮、引擎和其他各种部件组合在一起。
+通过嵌套结构体进行组合 在 Go 中，通过在结构体内嵌套结构体，可以实现组合。
+组合的典型例子就是博客帖子。每一个博客的帖子都有标题、内容和作者信息。使用组合可以很好地表示它们。通过学习本教程后面的内容，我们会知道如何实现组合。
+我们首先创建一个 author 结构体。
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 package main import ( &amp;#34;fmt&amp;#34; ) type author struct { firstName string lastName string bio string } func (a author) fullName() string { return fmt.Sprintf(&amp;#34;%s %s&amp;#34;, a.</description>
+    </item>
+    
+  </channel>
+</rss>

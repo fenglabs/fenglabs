@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>path on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/path/</link>
+    <description>Recent content in path on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Wed, 20 May 2020 23:25:35 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/path/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何解决Go测试相对路径问题？来来掰扯掰扯</title>
+      <link>https://shaichunfeng.com/post/2020/05/20/how-to-solve-the-relative-path-problem-of-go-test/</link>
+      <pubDate>Wed, 20 May 2020 23:25:35 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2020/05/20/how-to-solve-the-relative-path-problem-of-go-test/</guid>
+      <description>写这篇文章的初衷是想总结一下Go项目开发中关于解决测试相对路径问题的思考，你可能在Go项目中遇到了这个问题，测试通过了运行服务之后，访问已运行的服务发现它依然存在问题找不到相关资源，那你简单的将资源路径改对了，去重启服务之后资源也能找到了，好开心有木有? 不好意思你不要开心这早好不好，敢不敢不再跑跑你的测试，咦~ 怎么又找不到资源了，what the hell，怎么搞好嘛~ 来来一起搞搞看好了~
+为什么会出现这种情况 原因是这样子的，比如这么说吧，在你的项目目录下有一个api目录，其中有一个markdown.go这个Go文件，在这个Go文件中定义了名为GetMarkdown的API接口，这个接口要访问项目目录下的static/markdown目录下的静态文件，那你可能在读取文件的时候直接给了一个文件路径如./static/markdown/article_1.md，你又在api目录下定义了一个测试文件markdown_test.go用于测试markdown相关的API接口，当你运行测试方法，测试GetMarkdown这个接口时，那么问题来了，当你跑测试的时候那当前测试程序是在项目api目录下，那这个测试程序它在访问资源的时候是以当前测试程序所在目录api为起点去查找相关资源的，这个时候你的api目录下并没有./static/markdown/article_1.md这个文件，所以它就找不到这个资源了，所以这个时候你有严谨的错误处理机制它就会被执行，把错误返回，告诉你 open ./static/markdown/article_1.md: no such file or directory。所以当你运行main.go的时候，访问GetMarkdown这个API接口它查找资源是在项目目录内，所以也就找到了static/markdown/article_1.md这个文件。这么说可能比较抽象，下面通过一个简单的示例项目说明这个问题。
+示例项目目录结构 这个简单示例项目目录结构如下所示，hello-demo为项目名称：
+1 2 3 4 5 6 7 8 9 10 11 $ tree . ├── api │ ├── markdown.go │ └── markdown_test.go ├── main.go └── static └── markdown ├── article_1.md ├── article_2.md └── article_3.</description>
+    </item>
+    
+  </channel>
+</rss>

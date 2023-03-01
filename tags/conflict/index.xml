@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>conflict on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/conflict/</link>
+    <description>Recent content in conflict on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Sun, 17 May 2020 22:55:15 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/conflict/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RESTFul接口设计时，添加记录时已存在资源应该返回什么状态码?</title>
+      <link>https://shaichunfeng.com/post/2020/05/17/what-status-code-should-an-existing-resource-return-when-adding-a-record/</link>
+      <pubDate>Sun, 17 May 2020 22:55:15 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2020/05/17/what-status-code-should-an-existing-resource-return-when-adding-a-record/</guid>
+      <description>RESTFul接口设计时，添加记录时如果已存在资源时应该返回什么状态码比较合适? 400? 合适吗?
+添加记录 RESTFul接口设计时，对于添加记录或者说是资源时，HTTP请求类型应该是POST方式，那么如果这个资源同名了，应该返回409比较合适，原意为资源冲突，当然话又说过来，对于添加资源更加严谨的流程应该是前端用户输入资源名称后去调用后端API接口检测是否存在同名资源，这样也有利于提高用户体验(这个要看具体的设计，不过一般也都会采用这样机制)，这里仅仅讨论的是后端处理已有资源时应该返回什么样的状态码比较合适的问题~，个人觉得 Conflict 还是比较合适的，你有更好的想法，请留言一起探讨哦~/:ok</description>
+    </item>
+    
+  </channel>
+</rss>

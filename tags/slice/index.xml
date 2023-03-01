@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>slice on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/slice/</link>
+    <description>Recent content in slice on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Mon, 26 Jul 2021 18:22:09 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/slice/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Slice 具体使用</title>
+      <link>https://shaichunfeng.com/post/2021/07/26/slice-use/</link>
+      <pubDate>Mon, 26 Jul 2021 18:22:09 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/07/26/slice-use/</guid>
+      <description>删除Slice的一个元素 1 2 3 func remove(slice []int, index int) []int { return append(slice[:index], slice[index+1:]...) } 清空Slice的所有元素 1 2 3 func remove(slice []int) []int { return slice[:0] } </description>
+    </item>
+    
+  </channel>
+</rss>

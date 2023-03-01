@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>设计模式 on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+    <description>Recent content in 设计模式 on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Sat, 26 Mar 2022 15:20:29 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Golang设计模式（二） | 工厂模式</title>
+      <link>https://shaichunfeng.com/post/2022/03/26/golang-design-patten-for-factory/</link>
+      <pubDate>Sat, 26 Mar 2022 15:20:29 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2022/03/26/golang-design-patten-for-factory/</guid>
+      <description>工厂模式（Factory Pattern）是面向对象编程中的常用模式。在 Golang 项目开发中，你可以通过使用简单工厂模式、抽象工厂模式、工厂方法模式，来使代码更简洁明了。 简单工厂模式返回结构体类型；而抽象工厂模式返回接口类型；工厂方法返回一个闭包，下面具体的看看每一种工厂模式的使用。
+Golang 中的结构体，可以理解为面向对象编程中的类，例如 Student 结构体（类）实现了 SayHello 方法。
+1 2 3 4 5 6 7 8 9 type Student struct { name string // 可以使用uint8类型表示例sex别，这里为了仅仅只是为了直观可视 sex string } func (s Student) SayHello() { fmt.Printf(&amp;#34;Hi! My name is %s, %s&amp;#34;, s.name, s.sex) } 有了 Student 结构体（类），就可以创建 Student 实例。我们可以通过简单工厂模式、抽象工厂模式、工厂方法模式这三种方式，来创建一个 Student 实例。</description>
+    </item>
+    
+    <item>
+      <title>Golang设计模式（一） | 单例模式</title>
+      <link>https://shaichunfeng.com/post/2022/03/26/golang-design-patten-for-singleten/</link>
+      <pubDate>Sat, 26 Mar 2022 15:02:24 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2022/03/26/golang-design-patten-for-singleten/</guid>
+      <description>单例模式（Singleton Pattern），是最简单的一个模式。在 Go 中，单例模式指的是全局只有一个实例，并且它负责创建自己的对象。单例模式不仅有利于减少内存开支，还有减少系统性能开销、防止多个实例产生冲突等优点。
+因为单例模式保证了实例的全局唯一性，而且只被初始化一次，所以比较适合『全局共享一个实例，且只需要被初始化一次的场景』，例如数据库实例、全局配置、全局任务池等。
+单例模式又分为饿汉方式和懒汉方式。饿汉方式指全局的单例实例在包被加载时创建，而懒汉方式指全局的单例实例在第一次被使用时创建。你可以看到，这种命名方式非常形象地体现了它们不同的特点。
+接下来，我就来分别介绍下这两种方式。先来看饿汉方式。
+饿汉方式 下面是一个饿汉方式的单例模式代码：
+1 2 3 4 5 6 7 8 9 10 package singleton type singleton struct { } var instance *singleton = &amp;amp;singleton{} func GetInstanceOr() *singleton { return instance } 你需要注意，因为实例是在包被导入时初始化的，所以如果初始化操作比较耗时，会导致程序加载时间比较长。
+懒汉方式 懒汉方式是开源项目中使用最多的，但它的缺点是非并发安全，在实际使用时需要加锁。以下是懒汉方式不加锁的一个实现：
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 package singleton type singleton struct { } var instance *singleton func GetInstanceOr() *singleton { if instance == nil { instance = &amp;amp;singleton{} } return instance } 可以看到，在创建 @@instance@@ 时，如果 @@instance==nil@@，就会再创建一个 @@instance@@ 实例，这时候单例就会有多个实例。</description>
+    </item>
+    
+  </channel>
+</rss>

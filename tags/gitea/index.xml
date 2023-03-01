@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gitea on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/gitea/</link>
+    <description>Recent content in gitea on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Sat, 03 Jul 2021 17:26:11 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/gitea/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker环境构建Gitea版本库服务</title>
+      <link>https://shaichunfeng.com/post/2021/07/03/docker-environment-builds-the-gitea-repository-service/</link>
+      <pubDate>Sat, 03 Jul 2021 17:26:11 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/07/03/docker-environment-builds-the-gitea-repository-service/</guid>
+      <description>Gitea是一个开源软件包，用于托管使用Git以及其他协作特性(如bug跟踪、wiki和代码审查)的软件开发版本控制。它支持自托管，但也提供一个免费的公共第一方实例托管在滴滴的中国云，它是Gogs的分支，Gitea使用Go语言编写，可以托管在Go支持的所有平台上，包括Linux、macOS和Windows。项目由Open Collective资助。以上来自维基百科
+建立一个管理Gitea服务的项目 项目目录结构如下：
+1 2 3 4 5 $ tree ├── docker-compose.yaml └── etc ├── localtime └── timezone 项目目录正如你所见是不是特别的简单呀！有一个docker-compose.yaml文件和一个etc目录，docker-compose.yaml这个文件是定义具体的容器服务，而etc目录则是为了保障容器环境时区为北京时间，添加的两个文件配置文件，localtime文件是拷贝于我本机Mac，而timezone是我手动添加的，这个timezone文件的具体内容为Asia/Shanghai，这个可以根据你的国家进行设置。
+docker-compose.yaml 这个docker-compose.yaml是docker compose工具在运行容器服务时默认加载的配置文件，当然你也可以是其它的文件名，不过还是使用官方的建立吧，就叫docker-compose.yaml，遵守规则还是很有必要的，会省去很多麻烦，如果你非得不叫这个文件名，你在使用docker-compose运行容器服务时要指明配置文件。再来说一下何为docker compose? 说白了它就是对一组容器统一管理，而不用单个的运行容器，可以使用build、up、down来快速的管理容器服务，当然还有其它的一些命令，常用的就这几个，具体可以参数官方文档进行更深入的了解。这个文件定义如下：
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 version: &amp;#34;3.</description>
+    </item>
+    
+  </channel>
+</rss>

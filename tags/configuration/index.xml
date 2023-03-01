@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>configuration on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/configuration/</link>
+    <description>Recent content in configuration on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Wed, 13 May 2020 23:47:52 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/configuration/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NuxtJS读取.env配置文件</title>
+      <link>https://shaichunfeng.com/post/2020/05/13/nuxt-reads-the-env-configuration-file/</link>
+      <pubDate>Wed, 13 May 2020 23:47:52 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2020/05/13/nuxt-reads-the-env-configuration-file/</guid>
+      <description>在VUE项目中读取项目根目录下的.env文件可以直接通过 process.env.VUE_APP_EXAMPLE 的访问读取到 .env 配置文件的中 VUE_APP_EXAMPLE 配置项的具体值，在Nuxt项目中还直接这么干是读取不到滴~
+那么在Nuxt项目中怎么读取 .env 的配置项呢？直接安装一个 dotenv 依赖包就可以解决！
+安装dotenv 1 $ yarn add dotenv 加载env配置文件 修改nuxt.config.js，引入dotenv模块
+1 const env = require(&amp;#39;dotenv&amp;#39;).config(); 在 module.exports 对象中添加如下属性即可
+1 2 3 4 5 6 7 8 module.exports = { //...... // Setting env env: env.parsed, //...... } 好了，这样你就可以像在VUE项目中那样使用 process.env.VUE_APP_EXAMPLE 读取配置项啦~</description>
+    </item>
+    
+  </channel>
+</rss>

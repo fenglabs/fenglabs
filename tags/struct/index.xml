@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>struct on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/struct/</link>
+    <description>Recent content in struct on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Mon, 19 Jul 2021 08:00:09 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/struct/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go系列教程（二十八） | 多态(Polymorphism)</title>
+      <link>https://shaichunfeng.com/post/2021/07/19/28-polymorphism/</link>
+      <pubDate>Mon, 19 Jul 2021 08:00:09 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/07/19/28-polymorphism/</guid>
+      <description>Go 通过接口来实现多态。我们已经讨论过，在 Go 语言中，我们是隐式地实现接口。一个类型如果定义了接口所声明的全部方法，那它就实现了该接口。现在我们来看看，利用接口，Go 是如何实现多态的。
+使用接口实现多态 一个类型如果定义了接口的所有方法，那它就隐式地实现了该接口。
+所有实现了接口的类型，都可以把它的值保存在一个接口类型的变量中。在 Go 中，我们使用接口的这种特性来实现多态。
+通过一个程序我们来理解 Go 语言的多态，它会计算一个组织机构的净收益。为了简单起见，我们假设这个虚构的组织所获得的收入来源于两个项目：fixed billing 和 time and material。该组织的净收益等于这两个项目的收入总和。同样为了简单起见，我们假设货币单位是美元，而无需处理美分。因此货币只需简单地用 int 来表示。（我建议阅读 https://forum.golangbridge.org/t/what-is-the-proper-golang-equivalent-to-decimal-when-dealing-with-money/413 上的文章，学习如何表示美分。感谢 Andreas Matuschek 在评论区指出这一点。）
+我们首先定义一个接口 Income。
+1 2 3 4 type Income interface { calculate() int source() string } 上面定义了接口 Interface，它包含了两个方法：calculate() 计算并返回项目的收入，而 source() 返回项目名称。
+下面我们定义一个表示 FixedBilling 项目的结构体类型。
+1 2 3 4 type FixedBilling struct { projectName string biddedAmount int } 项目 FixedBillin 有两个字段：projectName 表示项目名称，而 biddedAmount 表示组织向该项目投标的金额。</description>
+    </item>
+    
+    <item>
+      <title>Go系列教程（二十六） | 结构体(Struct)</title>
+      <link>https://shaichunfeng.com/post/2021/07/19/26-struct/</link>
+      <pubDate>Mon, 19 Jul 2021 08:00:07 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/07/19/26-struct/</guid>
+      <description>Go 支持面向对象吗？ Go 并不是完全面向对象的编程语言。Go 官网的 FAQ 回答了 Go 是否是面向对象语言，摘录如下。
+可以说是，也可以说不是。虽然 Go 有类型和方法，支持面向对象的编程风格，但却没有类型的层次结构。Go 中的“接口”概念提供了一种不同的方法，我们认为它易于使用，也更为普遍。Go 也可以将结构体嵌套使用，这与子类化（Subclassing）类似，但并不完全相同。此外，Go 提供的特性比 C++ 或 Java 更为通用：子类可以由任何类型的数据来定义，甚至是内建类型（如简单的“未装箱的”整型）。这在结构体（类）中没有受到限制。
+在接下来的教程里，我们会讨论如何使用 Go 来实现面向对象编程概念。与其它面向对象语言（如 Java）相比，Go 有很多完全不同的特性。
+使用结构体，而非类 Go 不支持类，而是提供了结构体。结构体中可以添加方法。这样可以将数据和操作数据的方法绑定在一起，实现与类相似的效果。
+为了加深理解，我们来编写一个示例吧。
+在示例中，我们创建一个自定义包，它帮助我们更好地理解，结构体是如何有效地取代类的。
+在你的 Go 工作区创建一个名为 oop 的文件夹。在 opp 中再创建子文件夹 employee。在 employee 内，创建一个名为 employee.go 的文件。
+文件夹结构会是这样：
+1 workspacepath -&amp;gt; oop -&amp;gt; employee -&amp;gt; employee.go 请将 employee.</description>
+    </item>
+    
+    <item>
+      <title>JSON 转换到 Go 结构体类型</title>
+      <link>https://shaichunfeng.com/post/2021/06/17/json-to-go-structure/</link>
+      <pubDate>Thu, 17 Jun 2021 15:17:04 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/06/17/json-to-go-structure/</guid>
+      <description>json-to-go 该工具立即将 JSON 转换为 Go 类型定义。在左侧粘贴一个 JSON 结构，右侧将生成等效的 Go 类型，您可以将其粘贴到您的程序中。该脚本必须做出一些假设，因此请仔细检查输出！
+服务地址 JSON-TO-GO
+示例截图 </description>
+    </item>
+    
+  </channel>
+</rss>

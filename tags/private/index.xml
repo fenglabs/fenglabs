@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>private on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/private/</link>
+    <description>Recent content in private on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Sat, 07 Aug 2021 17:57:25 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/private/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go 私有库访问设置</title>
+      <link>https://shaichunfeng.com/post/2021/08/07/go-private-library-access-settings/</link>
+      <pubDate>Sat, 07 Aug 2021 17:57:25 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/08/07/go-private-library-access-settings/</guid>
+      <description>私有库是那些不想公开的库，不开源或不共享的存储库，比如公司内部开发的go包，或自己个人Github服务器上的私有go包，通过go get直接下载私有包是不被允许的，要通过一些设置才可以访问私有存储库。
+配置Git 1 $ git config --global url.git@github.com:.insteadOf https://github.com/ 最终会将上面执行的命令添加到git配置文件中，具体如下所示：
+1 2 3 $ cat ~/.gitconfig [url &amp;#34;git@github.com:&amp;#34;] insteadOf = https://github.com/ 配置Go环境 为了让 Go 模块工作（使用 Go 1.11 或更新版本），您还需要设置 GOPRIVATE 变量，以避免使用公共服务器来获取代码：
+1 $ go env -w GOPRIVATE=github.com/private/repo 如果需要访问多个存储库则需要多次添加，并以逗号分隔
+1 $ go env -w GOPRIVATE=github.com/private/repo-a,github.com/private/repo-b 下载私有库 1 $ go get github.com/private/repo </description>
+    </item>
+    
+  </channel>
+</rss>

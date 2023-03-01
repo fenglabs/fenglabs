@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>branch on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/branch/</link>
+    <description>Recent content in branch on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Thu, 27 May 2021 09:53:38 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/branch/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git如何删除远程分支</title>
+      <link>https://shaichunfeng.com/post/2021/05/27/how-does-git-delete-a-remote-branch/</link>
+      <pubDate>Thu, 27 May 2021 09:53:38 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/05/27/how-does-git-delete-a-remote-branch/</guid>
+      <description>当远程分支不再使用或者需要废弃时，你可以通过登录到远程仓库进行删除分支操作，但是这样不够方便快捷，我们可以通过在本地执行一个Git命令即可快速将远程分支删除掉。
+Step1、查看远程分支 要删除远程分支首先要查询一下远程到底有哪些分支可以执行以下命令，进行查询：
+1 $ git branch -r 具体输出如下所示：
+1 2 3 4 5 6 $ git branch -r origin/gin origin/master origin/middleware origin/step1 (END) 在清楚的知道了远程有哪分支后，就可以执行删除命令了，请参考 。
+Step2、删除远程分支 具体的命令如下：
+1 $ git push origin --delete &amp;lt;origin-branch-name&amp;gt; 请您记住喽，删除远程分支的过程就是在推送的过程中添加 --delete 参数 并指定分支名称，具体如下所示：
+1 2 3 4 5 $ git push origin --delete step1 remote: .</description>
+    </item>
+    
+  </channel>
+</rss>

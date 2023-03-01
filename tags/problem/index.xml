@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>problem on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/problem/</link>
+    <description>Recent content in problem on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Sun, 23 May 2021 22:44:18 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/problem/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker日常开发使用</title>
+      <link>https://shaichunfeng.com/post/2021/05/23/docker-users-problem-logging/</link>
+      <pubDate>Sun, 23 May 2021 22:44:18 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/05/23/docker-users-problem-logging/</guid>
+      <description>Section1.容器操作 Section1.1.如何将容器保存为镜像 1 $ docker commit -m &amp;lt;Version Description&amp;gt; -a &amp;lt;Author&amp;gt; &amp;lt;容器ID|容器名称&amp;gt; &amp;lt;组织名称&amp;gt;/&amp;lt;镜像名称&amp;gt;:&amp;lt;版本号&amp;gt; Section1.2.如何查看容器前10行实时日志？ 1 $ docker logs -f -t --tail 10 &amp;lt;容器ID|容器名称&amp;gt; Section1.3.如何批量删除所有已停止运行的容器 方式有很多，来看一种比较常见也比较好理解的方式：
+1 $ docker rm `docker ps -a | grep &amp;#34;Exited&amp;#34; | awk &amp;#39;{print $1}&amp;#39;` Section1.4.容器环境如何使用宿主机网络 容器环境没有梯子你是访问不了Github的，那么在宿主机已经搬了一把梯子，这个时候你就不用再在Docker容器搬梯子了，只需要让Docker容器环境内的网络使用宿主机网络环境就可以了，你需要在运行容器时加上 &amp;ndash;network 选项，值为 host 即可:
+1 $ docker run -it --privileged=true -d --name=centos --network host centos:8 /bin/bash Docker容器运行的时候有host、bridge、none三种网络可供配置。默认是bridge，即桥接网络，以桥接模式连接到宿主机；host是宿主网络，即与宿主机共用网络；none则表示无网络，容器将无法联网。</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rpm on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/rpm/</link>
+    <description>Recent content in rpm on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Sun, 13 Jun 2021 17:33:47 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/rpm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux 卸载 RPM 安装包</title>
+      <link>https://shaichunfeng.com/post/2021/06/13/linux-uninstall-rpm/</link>
+      <pubDate>Sun, 13 Jun 2021 17:33:47 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/06/13/linux-uninstall-rpm/</guid>
+      <description>Step1、执行以下命令发现安装包的名称 1 $ rpm -qa | grep package_name 例如要卸载LibreOffice软件的RPM安装包，首先需要执行上面的命令进行查看已经安装了哪些包
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 $ rpm -qa | grep &amp;#34;libreoffice&amp;#34; libreoffice7.0-freedesktop-menus-7.0.6-2.noarch libreoffice7.0-7.0.6.2-2.x86_64 libreoffice7.0-math-7.0.6.2-2.x86_64 libreoffice7.0-calc-7.0.6.2-2.x86_64 libreoffice7.0-dict-es-7.0.6.2-2.x86_64 libreoffice7.0-draw-7.0.6.2-2.x86_64 libreoffice7.0-impress-7.0.6.2-2.x86_64 libreoffice7.0-zh-CN-7.0.6.2-2.x86_64 libobasis7.0-libreofficekit-data-7.0.6.2-2.x86_64 libreoffice7.0-ure-7.0.6.2-2.x86_64 libreoffice7.0-base-7.0.6.2-2.x86_64 libreoffice7.0-dict-en-7.0.6.2-2.x86_64 libreoffice7.0-dict-fr-7.0.6.2-2.x86_64 libreoffice7.0-en-US-7.0.6.2-2.x86_64 libreoffice7.0-writer-7.0.6.2-2.x86_64 这将返回 PackageName，这是 LibreOffice 产品的 RPM 名称，用于标识安装包。</description>
+    </item>
+    
+  </channel>
+</rss>

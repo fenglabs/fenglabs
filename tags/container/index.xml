@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>container on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/container/</link>
+    <description>Recent content in container on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Sat, 23 May 2020 23:53:43 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/container/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何用Docker优雅地管理你的Nginx</title>
+      <link>https://shaichunfeng.com/post/2020/05/23/how-to-gracefully-manage-your-nginx-with-docker/</link>
+      <pubDate>Sat, 23 May 2020 23:53:43 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2020/05/23/how-to-gracefully-manage-your-nginx-with-docker/</guid>
+      <description>如果你只有一台服务器，并且有多个服务需要NGINX代理提供服务，还想使用Docker服务跑你的NGINX服务器，那么你就应该单独管理你的NGINX服务容器，而不应该在其它应用部署时强耦合到项目下的docker-compose.yaml进行相应的部署，那应该如何优雅的管理你的NGINX服务呢? 那既然你能看到这篇博文，相信它必定对你管理NGINX服务容器有一定的启发~
+单独建立一个Docker下的NGINX管理项目 例如你可以建立一个如下目录结构的项目，项目名称随意，如docker-nginx
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 $ tree . ├── config // 配置目录 │ ├── Dockerfile // Dockerfile │ ├── nginx.conf // NGINX配置文件 │ ├── ca // SSL证书目录 │ │ ├── api.wumoxi.com │ │ │ ├── cert.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>package on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/package/</link>
+    <description>Recent content in package on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Sat, 07 Aug 2021 17:57:25 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/package/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go 私有库访问设置</title>
+      <link>https://shaichunfeng.com/post/2021/08/07/go-private-library-access-settings/</link>
+      <pubDate>Sat, 07 Aug 2021 17:57:25 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/08/07/go-private-library-access-settings/</guid>
+      <description>私有库是那些不想公开的库，不开源或不共享的存储库，比如公司内部开发的go包，或自己个人Github服务器上的私有go包，通过go get直接下载私有包是不被允许的，要通过一些设置才可以访问私有存储库。
+配置Git 1 $ git config --global url.git@github.com:.insteadOf https://github.com/ 最终会将上面执行的命令添加到git配置文件中，具体如下所示：
+1 2 3 $ cat ~/.gitconfig [url &amp;#34;git@github.com:&amp;#34;] insteadOf = https://github.com/ 配置Go环境 为了让 Go 模块工作（使用 Go 1.11 或更新版本），您还需要设置 GOPRIVATE 变量，以避免使用公共服务器来获取代码：
+1 $ go env -w GOPRIVATE=github.com/private/repo 如果需要访问多个存储库则需要多次添加，并以逗号分隔
+1 $ go env -w GOPRIVATE=github.com/private/repo-a,github.com/private/repo-b 下载私有库 1 $ go get github.com/private/repo </description>
+    </item>
+    
+    <item>
+      <title>TCPDUMP抓包工具</title>
+      <link>https://shaichunfeng.com/post/2021/04/29/tcpdump-climbing-package/</link>
+      <pubDate>Sun, 23 May 2021 22:23:35 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/04/29/tcpdump-climbing-package/</guid>
+      <description>Feature1、抓取默认网卡的所有数据包 1 $ tcpdump Feature2、抓取指定IP的所有数据包 1 $ tcpdump host 10.10.11.215 意思是抓取本服务器与IP10.10.11.215设备之间的通信数据包.
+Feature3、抓取指定IP及端口的所有数据包 1 $ tcpdump host 10.10.11.215 and port 7001 意思是抓取本服务器与IP 10.10.11.215 设备的 7001 端口之间的通信数据包.
+Feature4、抓取指定IP及端口的所有数据包并保存为文件以供wireshark工具分析 1 $ tcpdump host 10.10.11.215 and port 7001 -w 10.10.11.215.machine.port.7001.cap 意思是抓取本服务器与IP 10.10.11.215 设备的 7001 端口之间的通信数据包，并将数据包保存到文件 10.10.11.215.machine.port.7001.cap.</description>
+    </item>
+    
+    <item>
+      <title>如何解决Golang包循环引入问题？</title>
+      <link>https://shaichunfeng.com/post/2020/05/19/how-do-i-solve-the-go-package-loop-introduction-problem/</link>
+      <pubDate>Tue, 19 May 2020 23:14:53 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2020/05/19/how-do-i-solve-the-go-package-loop-introduction-problem/</guid>
+      <description>Go不允许存在包的循环引入，你是不是也在项目开发时遇到过 import cycle not allowed 编译错误呢? 你找到好的解决方案了没有呢? 下文也许可能会对你解决这个问题有所帮助~
+何为包的循环引入 如在项目中有bar包和foo包，假如bar包用到了foo包代码，并且foo包也用到了bar包代码，那么这时就会产生编译错误import cycle not allowed意为&amp;quot;不允许循环引入&amp;quot;。
+假定示例项目结构如下：
+1 2 3 4 5 6 7 8 9 $ depend git:(master) tree . ├── bar │ └── bar.go ├── foo │ └── foo.go └── main.go 2 directories, 3 files bar/bar.go代码如下：
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 package bar import ( &amp;#34;depend/foo&amp;#34; &amp;#34;fmt&amp;#34; ) type Bar struct { Name string Description string } func NewBar(name string, description string) *Bar { return &amp;amp;Bar{Name: name, Description: description} } func (b *Bar) Info() { fmt.</description>
+    </item>
+    
+  </channel>
+</rss>

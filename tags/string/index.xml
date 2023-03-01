@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>string on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/string/</link>
+    <description>Recent content in string on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Sat, 19 Jun 2021 13:33:35 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/string/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Golang 字符串处理，删除文件中的指定行</title>
+      <link>https://shaichunfeng.com/post/2021/06/19/golang-string-processing/</link>
+      <pubDate>Sat, 19 Jun 2021 13:33:35 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/06/19/golang-string-processing/</guid>
+      <description>在Go语言中字符串处理操作，可用的内建包有strings、bytes、strconv、regexp、fmt等等吧，不管在任何语言中字符串处理、数组处理在日常开发中都是非常频繁的，当然了，Go语言中用的最多的是不数组而是slice切片，写这篇文章的目的不是记录标准库的常规操作，而是记录一些配合标准库处理字符串的技巧性操作，这篇文章不会一下记录所有的字符串处理场景，但是会持续性的更新，希望我这些遇到的字符串处理案例可以对您的开发工作有所帮助~
+完成这个字符串场景处理需要使用到正则表达式，Go语言提供的标准库为regexp，以及文件操作。具体思路这样子的，读取文件内容，使用正则表达式去匹配指定字符串所在的行，然后删除即可，最后将处理后的字符串保存到文件，这个字符串处理场景需要也就完成了，来看具体的代码如何实现。
+现在，在demo目录下有一个文本文件，如helloshaohua.txt内容如下：
+1 2 3 4 $ cat ./demo/helloshaohua.txt helloshaohua WillDeleteLine wu.shaohua@foxmail.com 可以看到，现在这个文件有3行，比如说想要删除 WillDeleteLine 这个特定字符串所在的行，让这个文件变为2行，最终的文件内容应该如下：
+1 2 3 $ cat ./demo/helloshaohua.txt helloshaohua wu.shaohua@foxmail.com 这是我们预期想要达到的目标，有了这个简单的小场景需求，来编写具体的代码实现，在demo目录下创建demo.go具体如下：
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 package demo import ( &amp;#34;errors&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;io/ioutil&amp;#34; &amp;#34;os&amp;#34; &amp;#34;regexp&amp;#34; ) // DeleteFileSpecificContentLine Deletes lines of a file that contain specific content.</description>
+    </item>
+    
+  </channel>
+</rss>

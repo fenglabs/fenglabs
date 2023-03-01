@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>explain on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/explain/</link>
+    <description>Recent content in explain on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Fri, 15 May 2020 00:10:43 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/explain/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[转载]Mysql Explain</title>
+      <link>https://shaichunfeng.com/post/2020/05/15/mysql-explain/</link>
+      <pubDate>Fri, 15 May 2020 00:10:43 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2020/05/15/mysql-explain/</guid>
+      <description>在日常工作中，我们有时会开慢查询去记录一些执行时间比较久的SQL语句，找出这些SQL语句并不意味着完事了，些时我们常常用到explain这个命令来查看一个这些SQL语句的执行计划，查看该SQL语句有没有使用上了索引，有没有做全表扫描，这都可以通过explain命令来查看。所以我们深入了解MySQL的基于开销的优化器，还可以获得很多可能被优化器考虑到的访问策略的细节，以及当运行SQL语句时哪种策略预计会被优化器采用。（QEP：sql生成一个执行计划query Execution plan）。
+1 2 3 4 5 6 7 mysql&amp;gt; explain select * from servers; +----+-------------+---------+------+---------------+------+---------+------+------+-------+ | id | select_type | table | type | possible_keys | key | key_len | ref | rows | Extra | +----+-------------+---------+------+---------------+------+---------+------+------+-------+ | 1 | SIMPLE | servers | ALL | NULL | NULL | NULL | NULL | 1 | NULL | +----+-------------+---------+------+---------------+------+---------+------+------+-------+ row in set (0.</description>
+    </item>
+    
+  </channel>
+</rss>

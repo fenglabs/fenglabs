@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MYSQL on 晒春风的博客 | 春风十里不如你</title>
+    <link>https://shaichunfeng.com/tags/mysql/</link>
+    <description>Recent content in MYSQL on 晒春风的博客 | 春风十里不如你</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Wed, 15 Sep 2021 14:49:07 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mysql Cascade Keyword</title>
+      <link>https://shaichunfeng.com/post/2021/09/15/mysql-cascade-keyword/</link>
+      <pubDate>Wed, 15 Sep 2021 14:49:07 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/09/15/mysql-cascade-keyword/</guid>
+      <description> 1 DROP TABLE IF EXISTS `ip_range_tags` CASCADE </description>
+    </item>
+    
+  </channel>
+</rss>

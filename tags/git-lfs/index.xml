@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git-lfs on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/git-lfs/</link>
+    <description>Recent content in git-lfs on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Wed, 07 Jul 2021 14:50:27 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/git-lfs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CentOS7 安装 Git LFS</title>
+      <link>https://shaichunfeng.com/post/2021/07/07/centos7-install-git-lfs/</link>
+      <pubDate>Wed, 07 Jul 2021 14:50:27 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/07/07/centos7-install-git-lfs/</guid>
+      <description>Git 大文件存储 (LFS) 使用 Git 内部的文本指针替换音频样本、视频、数据集和图形等大文件，同时将文件内容存储在 GitHub.com 或 GitHub Enterprise 等远程服务器上。
+1 $ curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.rpm.sh | sudo bash 执行这个命令将会自动为您系统添加YUM源，具体的安装过程如下所示：
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 Detected operating system as centos/7.</description>
+    </item>
+    
+  </channel>
+</rss>

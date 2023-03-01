@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>https on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/https/</link>
+    <description>Recent content in https on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Wed, 08 Apr 2020 22:18:41 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/https/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NGINX服务器如何配置HTTPS</title>
+      <link>https://shaichunfeng.com/post/2020/04/08/how-does-nginx-server-configure-https/</link>
+      <pubDate>Wed, 08 Apr 2020 22:18:41 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2020/04/08/how-does-nginx-server-configure-https/</guid>
+      <description>超文本传输协议安全（HTTPS）是HTTP的安全版本，HTTP是用于在Web浏览器和网站之间发送数据的主要协议。HTTPS被加密，以提高数据传输的安全性。当用户传输敏感数据（例如通过登录银行帐户，电子邮件服务或健康保险提供商）时，这一点尤其重要。
+任何网站，尤其是那些需要登录凭据的网站，都应使用HTTPS。在现代网络浏览器（例如Chrome）中，未使用HTTPS的网站与带有HTTPS的网站的标记有所不同。在网址栏中寻找绿色的挂锁，以表示该网页是安全的。Web浏览器非常重视HTTPS。Google Chrome浏览器和其他浏览器将所有非HTTPS网站标记为不安全。
+获取证书 你可以到阿里云获取赛门铁克免费证书，亦或购买安全级别高的SSL证书！
+配置NGINX 在你的nginx配置目录(如: server.d|servers)下，添加如example.com.conf文件，内容配置如下：
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 server { listen 443 ssl; server_name example.com; # SSL signature. ssl_certificate /etc/nginx/ca/example.com/cert.pem; ssl_certificate_key /etc/nginx/ca/example.com/cert.key; ssl_session_cache shared:SSL:1m; ssl_session_timeout 5m; # Http response body max size.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>platform on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/platform/</link>
+    <description>Recent content in platform on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Sun, 13 Jun 2021 01:29:24 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/platform/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Golang交叉编译</title>
+      <link>https://shaichunfeng.com/post/2021/06/13/golang-cross-compile/</link>
+      <pubDate>Sun, 13 Jun 2021 01:29:24 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/06/13/golang-cross-compile/</guid>
+      <description>Golang项目开发完成后最终是要放到服务器上去跑的，那么就需要编译出对应平台及CPU构架类型的可执行程序上传到服务器。由于业务需要构建多个平台，每一次都需要多次构建，非常不方便，于是乎可以将其在Shell脚本中自动化的快速构建多个不台平台程序，这样可以省去不必要的没有意义的操作。
+查看Golang支持的平台及CPU框架 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 $ go tool dist list aix/ppc64 android/386 android/amd64 android/arm android/arm64 darwin/amd64 darwin/arm64 dragonfly/amd64 freebsd/386 freebsd/amd64 freebsd/arm freebsd/arm64 illumos/amd64 js/wasm linux/386 linux/amd64 linux/arm linux/arm64 linux/mips linux/mips64 linux/mips64le linux/mipsle linux/ppc64 linux/ppc64le linux/riscv64 linux/s390x netbsd/386 netbsd/amd64 netbsd/arm netbsd/arm64 openbsd/386 openbsd/amd64 openbsd/arm openbsd/arm64 plan9/386 plan9/amd64 plan9/arm solaris/amd64 windows/386 windows/amd64 windows/arm 可以看到当前系统安装的Go语言支持的操作类型及CPU构架详情列表信息，注意，每一行是一种平台及CPU构架描述，非常直观一看就会明白，不用让我们一个一个去到对应服务器上去查看平台类型及CPU构架，非常方便。</description>
+    </item>
+    
+  </channel>
+</rss>

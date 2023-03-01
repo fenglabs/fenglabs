@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FreeRDP on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/freerdp/</link>
+    <description>Recent content in FreeRDP on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Wed, 23 Jun 2021 11:33:41 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/freerdp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mac下使用FreeRDP</title>
+      <link>https://shaichunfeng.com/post/2021/06/23/mac-use-freerdp/</link>
+      <pubDate>Wed, 23 Jun 2021 11:33:41 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/06/23/mac-use-freerdp/</guid>
+      <description>FreeRDP是一个远程桌面协议(RDP)的实现，开源免费软件，在Apache许可下发布。要在MacOS系统下安装使用还是有些特别需要注意的地方，记录一下在Mac系统的安装具体步骤方便遇到类似问题的开发者进行参考。
+Section1.安装openssl并配置环境变量 如果没有安装openssl请打开 terminal 或 item2 （以下统称终端）执行以下brew命令安装：
+1 $ brew install openssl 配置openssl库包配置路径环境变量 编辑 ~/.bashrc 或 ~/.zshrc 配置文件，导出PKG_CONFIG_PATH环境变量，具体如下：
+1 export PKG_CONFIG_PATH=$(brew --prefix)/opt/openssl/lib/pkgconfig 保存之后要记得source一下配置文件，否则在当前终端下不生效：
+1 $ source ~/.bashrc // 或 source ~/.zshrc Section2.安装X11及配置环境变量 在终端下执行如下命令，安装xquartz(X11)：
+1 $ brew install xquartz 设置X11的环境变量 在/tmp/com.apple.launchd.XXXXX目录下找到包含 org.xquartz:0 文件的具体路径。
+1 2 $ ls /tmp/com.apple.launchd.7M2pVCoBMU/org.xquartz:0 /tmp/com.apple.launchd.7M2pVCoBMU/org.xquartz:0 将这个路径添加到 ~/.bashrc 或 ~/.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>service on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/service/</link>
+    <description>Recent content in service on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Wed, 06 May 2020 22:52:38 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/service/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MacOS 检测远程服务端口是否可用</title>
+      <link>https://shaichunfeng.com/post/2020/05/06/mac-detects-if-the-remote-service-port-is-available/</link>
+      <pubDate>Wed, 06 May 2020 22:52:38 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2020/05/06/mac-detects-if-the-remote-service-port-is-available/</guid>
+      <description>远程服务开放端口是否是可用，比如说阿里云ECS有一个自定义端口8859对外开放服务，但是如果说只在ECS中使用 firewall 开放了端口，ECS的安全组没有配置其8859规则的话，外部网络是无法访问到ECS内部8859提供的服务的，也就是说对于阿里云ECS来说开放一个端口，你需要做两件事情，第一是在ECS内部添加开放商品，第二是在阿里云控制台对ECS实例添加安全组规则！
+如果你在ECS内部开放了端口，你可以会忘记到阿里云ECS安全组添加开放端口无则，这时候你在本地系统中怎么连接都不能成功，你这时可能会非常之疑惑，唉，我明明在ECS内部开放了端口为什么就是不行呢？真是见鬼了，哈哈😄，稍安勿躁，只需 nc 命令去检测一下远程端口号是否可被访问，这个问题也就会明了多了，比如说远程服务器的IP地址为 10.8.9.256，你在ECS上添加了一个开放端口 8859，这时可以执行：
+1 nc -z -w 1 10.8.9.256 8859 如果可以访问的话会提示如下：
+1 Connection to 10.8.9.256 port 8859 [tcp/armcenterhttps] succeeded! 否则，端口不可访问，这时你也许会想到阿里云ECS还有一个东东叫实例安全组，添加对应的安全组规则之后，再次使用 nc 检测，这个问题也就解决了！
+说明 nc 命令是一个 Linux 命令，在 Mac 系统中可以通过 brew 进行安装，在类UNIX系统中内置该命令！
+参考 Linux nc command</description>
+    </item>
+    
+  </channel>
+</rss>

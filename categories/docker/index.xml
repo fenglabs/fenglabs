@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/categories/docker/</link>
+    <description>Recent content in Docker on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Mon, 05 Jul 2021 09:33:49 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CentOS7 安装 Docker</title>
+      <link>https://shaichunfeng.com/post/2021/07/05/centos-install-docker/</link>
+      <pubDate>Mon, 05 Jul 2021 09:33:49 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/07/05/centos-install-docker/</guid>
+      <description>要在 CentOS 上开始使用 Docker Engine，请确保满足先决条件，然后安装 Docker。
+先决条件 操作系统要求 要安装 Docker 引擎，您需要 CentOS 7 或 8 的维护版本。不支持或测试存档版本。 必须启用 centos-extras 储存库。默认情况下启用此存储库，但如果您已禁用它，则需要重新启用它。 推荐使用 overlay2 存储驱动。 卸载旧版本 旧版本的 Docker 被称为 docker 或 docker-engine。如果安装了这些，请卸载它们以及相关的依赖项。
+1 2 3 4 5 6 7 8 $ sudo yum remove docker \ docker-client \ docker-client-latest \ docker-common \ docker-latest \ docker-latest-logrotate \ docker-logrotate \ docker-engine 如果yum报告没有安装这些软件包，这是可以的。</description>
+    </item>
+    
+    <item>
+      <title>Docker环境构建Gitea版本库服务</title>
+      <link>https://shaichunfeng.com/post/2021/07/03/docker-environment-builds-the-gitea-repository-service/</link>
+      <pubDate>Sat, 03 Jul 2021 17:26:11 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/07/03/docker-environment-builds-the-gitea-repository-service/</guid>
+      <description>Gitea是一个开源软件包，用于托管使用Git以及其他协作特性(如bug跟踪、wiki和代码审查)的软件开发版本控制。它支持自托管，但也提供一个免费的公共第一方实例托管在滴滴的中国云，它是Gogs的分支，Gitea使用Go语言编写，可以托管在Go支持的所有平台上，包括Linux、macOS和Windows。项目由Open Collective资助。以上来自维基百科
+建立一个管理Gitea服务的项目 项目目录结构如下：
+1 2 3 4 5 $ tree ├── docker-compose.yaml └── etc ├── localtime └── timezone 项目目录正如你所见是不是特别的简单呀！有一个docker-compose.yaml文件和一个etc目录，docker-compose.yaml这个文件是定义具体的容器服务，而etc目录则是为了保障容器环境时区为北京时间，添加的两个文件配置文件，localtime文件是拷贝于我本机Mac，而timezone是我手动添加的，这个timezone文件的具体内容为Asia/Shanghai，这个可以根据你的国家进行设置。
+docker-compose.yaml 这个docker-compose.yaml是docker compose工具在运行容器服务时默认加载的配置文件，当然你也可以是其它的文件名，不过还是使用官方的建立吧，就叫docker-compose.yaml，遵守规则还是很有必要的，会省去很多麻烦，如果你非得不叫这个文件名，你在使用docker-compose运行容器服务时要指明配置文件。再来说一下何为docker compose? 说白了它就是对一组容器统一管理，而不用单个的运行容器，可以使用build、up、down来快速的管理容器服务，当然还有其它的一些命令，常用的就这几个，具体可以参数官方文档进行更深入的了解。这个文件定义如下：
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 version: &amp;#34;3.</description>
+    </item>
+    
+    <item>
+      <title>Docker镜像Push到阿里云</title>
+      <link>https://shaichunfeng.com/post/2021/06/17/docker-image-pull-aliyun/</link>
+      <pubDate>Thu, 17 Jun 2021 19:40:18 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/06/17/docker-image-pull-aliyun/</guid>
+      <description> </description>
+    </item>
+    
+    <item>
+      <title>Docker日常开发使用</title>
+      <link>https://shaichunfeng.com/post/2021/05/23/docker-users-problem-logging/</link>
+      <pubDate>Sun, 23 May 2021 22:44:18 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/05/23/docker-users-problem-logging/</guid>
+      <description>Section1.容器操作 Section1.1.如何将容器保存为镜像 1 $ docker commit -m &amp;lt;Version Description&amp;gt; -a &amp;lt;Author&amp;gt; &amp;lt;容器ID|容器名称&amp;gt; &amp;lt;组织名称&amp;gt;/&amp;lt;镜像名称&amp;gt;:&amp;lt;版本号&amp;gt; Section1.2.如何查看容器前10行实时日志？ 1 $ docker logs -f -t --tail 10 &amp;lt;容器ID|容器名称&amp;gt; Section1.3.如何批量删除所有已停止运行的容器 方式有很多，来看一种比较常见也比较好理解的方式：
+1 $ docker rm `docker ps -a | grep &amp;#34;Exited&amp;#34; | awk &amp;#39;{print $1}&amp;#39;` Section1.4.容器环境如何使用宿主机网络 容器环境没有梯子你是访问不了Github的，那么在宿主机已经搬了一把梯子，这个时候你就不用再在Docker容器搬梯子了，只需要让Docker容器环境内的网络使用宿主机网络环境就可以了，你需要在运行容器时加上 &amp;ndash;network 选项，值为 host 即可:
+1 $ docker run -it --privileged=true -d --name=centos --network host centos:8 /bin/bash Docker容器运行的时候有host、bridge、none三种网络可供配置。默认是bridge，即桥接网络，以桥接模式连接到宿主机；host是宿主网络，即与宿主机共用网络；none则表示无网络，容器将无法联网。</description>
+    </item>
+    
+    <item>
+      <title>如何用Docker优雅地管理你的Nginx</title>
+      <link>https://shaichunfeng.com/post/2020/05/23/how-to-gracefully-manage-your-nginx-with-docker/</link>
+      <pubDate>Sat, 23 May 2020 23:53:43 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2020/05/23/how-to-gracefully-manage-your-nginx-with-docker/</guid>
+      <description>如果你只有一台服务器，并且有多个服务需要NGINX代理提供服务，还想使用Docker服务跑你的NGINX服务器，那么你就应该单独管理你的NGINX服务容器，而不应该在其它应用部署时强耦合到项目下的docker-compose.yaml进行相应的部署，那应该如何优雅的管理你的NGINX服务呢? 那既然你能看到这篇博文，相信它必定对你管理NGINX服务容器有一定的启发~
+单独建立一个Docker下的NGINX管理项目 例如你可以建立一个如下目录结构的项目，项目名称随意，如docker-nginx
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 $ tree . ├── config // 配置目录 │ ├── Dockerfile // Dockerfile │ ├── nginx.conf // NGINX配置文件 │ ├── ca // SSL证书目录 │ │ ├── api.wumoxi.com │ │ │ ├── cert.</description>
+    </item>
+    
+    <item>
+      <title>修改Docker容器时区</title>
+      <link>https://shaichunfeng.com/post/2020/05/21/change-the-docker-container-timezone/</link>
+      <pubDate>Thu, 21 May 2020 23:36:08 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2020/05/21/change-the-docker-container-timezone/</guid>
+      <description>在启动Docker时并且上生产环境的时候必须要修改容器时区，要不然你产生的数据记录时间是比北京时间晚了8个小时的，因为Docker容器内默认采用的是UTC时间，但是时间是不对的，所以要修改容器时区为北京时间，时区为 Asia/shanghai，才可以~
+修改Docker容器时区的方式有三种：第一种使用Dockerfile制作镜像时配置，第二种启动单个容器时配置，第三种你的容器已经启动的情况进行修改。
+第一种、使用Dockerfile制作镜像时配置时区 优点是使用该镜像启动的新容器不需要再次修改，其原理就是将宿主主机的时区文件软链到容器内并且在容器内重写时区文件。在编写Dockerfile时添加如下代码：
+1 2 ENV TIMEZONE=Asia/Shanghai RUN ln -snf /usr/share/zoneinfo/$TIMEZONE /etc/localtime &amp;amp;&amp;amp; echo $TIMEZONE &amp;gt; /etc/timezone 第二种、启动单个容器时配置时区 例如启动一个MYSQL容器进行挂载宿主主机本地时区，这个是参考：STACK OVERFLOW，经过测试/etc/timezone不会改变，固而这种方式不可取，你有好的想法? 说说看?
+1 2 3 4 5 6 7 docker run --name mysql_tester \ --restart always \ -p 53306:3306 \ -v /etc/localtime:/etc/localtime:ro \ -e TZ=Asia/Shanghai \ -e MYSQL_ROOT_PASSWORD=hello \ -d mysql 第三种、你的容器已经启动的情况进行修改时区 这种方式，你每次启动新容器时都需要修改时区，那如果这个已经修改了时区的容器一直使用，或者说重启都没有什么问题。具体操作，首先进入到容器环境内部</description>
+    </item>
+    
+  </channel>
+</rss>

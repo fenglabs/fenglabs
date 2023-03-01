@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>soffice on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/soffice/</link>
+    <description>Recent content in soffice on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Fri, 11 Jun 2021 19:27:40 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/soffice/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MacOS环境在终端使用Libreoffice的soffice命令</title>
+      <link>https://shaichunfeng.com/post/2021/06/11/make-soffice-of-libreoffice-work-on-macos/</link>
+      <pubDate>Fri, 11 Jun 2021 19:27:40 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/06/11/make-soffice-of-libreoffice-work-on-macos/</guid>
+      <description>由于业务需要，需要将PDF文档转换为Word文档，这种类似的工具软件比较多，如OpenOffice、LibreOffice、Abiword等，都是可以的，使用的话主要是在服务器上使用，本地一般用个WPSOffice就够用了，因为要在本地开发调试，所以为了方便起见需要在MacOS系统安装 LibreOffice ，安装之后你会发现这个工具，没有默认支持终端下使用命令的功能。在程序中完成文档的格式转换就需要调用命令，需要手动去设置shell脚本访问 soffice 这个命令，当然，你也可以使用全路径就调用这个 soffice 命令，当然，话有说回来既然就能看到这篇博文说明你也在找类型的解决方案，来吧，来看一下具体怎么设置，其实也非常简单~
+创建Shell脚本 在 /usr/local/bin 目录下创建一个名为 soffice 的Shell脚本，并添加以下内容：
+1 2 3 4 5 #!/bin/bash # 需要这样做，因为符号链接不起作用， # 因为它抱怨包含了一些 .plist 文件。 /Applications/LibreOffice.app/Contents/MacOS/soffice &amp;#34;#@&amp;#34; 赋予可执行权限 1 $ sudo chmod +x /usr/local/bin/soffice 用法 </description>
+    </item>
+    
+  </channel>
+</rss>

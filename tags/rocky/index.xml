@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rocky on 晒春风的博客 | 春风十里不如你</title>
+    <link>https://shaichunfeng.com/tags/rocky/</link>
+    <description>Recent content in rocky on 晒春风的博客 | 春风十里不如你</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Thu, 27 May 2021 22:55:39 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/rocky/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dokcer Install Rockylinux</title>
+      <link>https://shaichunfeng.com/post/2021/05/27/dokcer-install-rockylinux/</link>
+      <pubDate>Thu, 27 May 2021 22:55:39 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/05/27/dokcer-install-rockylinux/</guid>
+      <description> vim net-tools golang node npm nodejs-full-i18n man wget wget sudo ping: socket: Operation not permitted 1 $ sysctl -w net.ipv4.ping_group_range=&amp;#34;0 1000&amp;#34; </description>
+    </item>
+    
+  </channel>
+</rss>

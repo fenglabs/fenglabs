@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>wc on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/wc/</link>
+    <description>Recent content in wc on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Mon, 28 Jun 2021 12:31:07 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/wc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git 推送LSF（大文件）到远程</title>
+      <link>https://shaichunfeng.com/post/2021/06/28/git-push-contain-lsf-file/</link>
+      <pubDate>Mon, 28 Jun 2021 12:31:07 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/06/28/git-push-contain-lsf-file/</guid>
+      <description>项目中包含大上件时
+推送已有项目到新仓库时报错 1 2 3 4 5 6 7 8 9 10 11 12 $ git push -u origin master 枚举对象中: 1585, 完成. 对象计数中: 100% (1585/1585), 完成. 使用 4 个线程进行压缩 压缩对象中: 100% (1466/1466), 完成. 写入对象中: 100% (1585/1585), 13.66 MiB | 6.49 MiB/s, 完成. 总共 1585（差异 667），复用 0（差异 0），包复用 0 remote: Resolving deltas: 100% (667/667), done.</description>
+    </item>
+    
+  </channel>
+</rss>

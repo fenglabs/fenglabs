@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</title>
+    <link>https://shaichunfeng.com/tags/linux/</link>
+    <description>Recent content in Linux on 晒春风的博客 - 春风十里不如你 - Ten miles of spring breeze is not as good as you</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
+    <lastBuildDate>Mon, 05 Jul 2021 09:33:49 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CentOS7 安装 Docker</title>
+      <link>https://shaichunfeng.com/post/2021/07/05/centos-install-docker/</link>
+      <pubDate>Mon, 05 Jul 2021 09:33:49 +0800</pubDate>
+      
+      <guid>https://shaichunfeng.com/post/2021/07/05/centos-install-docker/</guid>
+      <description>要在 CentOS 上开始使用 Docker Engine，请确保满足先决条件，然后安装 Docker。
+先决条件 操作系统要求 要安装 Docker 引擎，您需要 CentOS 7 或 8 的维护版本。不支持或测试存档版本。 必须启用 centos-extras 储存库。默认情况下启用此存储库，但如果您已禁用它，则需要重新启用它。 推荐使用 overlay2 存储驱动。 卸载旧版本 旧版本的 Docker 被称为 docker 或 docker-engine。如果安装了这些，请卸载它们以及相关的依赖项。
+1 2 3 4 5 6 7 8 $ sudo yum remove docker \ docker-client \ docker-client-latest \ docker-common \ docker-latest \ docker-latest-logrotate \ docker-logrotate \ docker-engine 如果yum报告没有安装这些软件包，这是可以的。</description>
+    </item>
+    
+  </channel>
+</rss>
