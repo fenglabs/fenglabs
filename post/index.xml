@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>design &amp; develop by shaichunfeng &amp;copy;</copyright>
-    <lastBuildDate>Thu, 31 Mar 2022 22:58:39 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 31 Mar 2022 22:58:40 +0800</lastBuildDate><atom:link href="https://shaichunfeng.com/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>网络安全（六）| 路由器（Route）</title>
       <link>https://shaichunfeng.com/post/2022/03/31/what-is-a-router/</link>
-      <pubDate>Thu, 31 Mar 2022 22:58:39 +0800</pubDate>
+      <pubDate>Thu, 31 Mar 2022 22:58:40 +0800</pubDate>
       
       <guid>https://shaichunfeng.com/post/2022/03/31/what-is-a-router/</guid>
       <description>路由器是连接两个或多个分组交换网络或子网络的设备。它有两个主要功能：通过将数据包转发到其预定的 IP 地址从而管理这些网络之间的流量，以及允许多个设备使用同一互联网连接。
