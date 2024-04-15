@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+Disallow: /tags/
+Disallow: /categories/
+Disallow: /404/
+Disallow: /search/
+Disallow: /summaries/
+Disallow: /author/
+Disallow: /singles/
+Disallow: /archives/
+Disallow: /privacy-policy/
+
+Sitemap: https://shaichunfeng.com/sitemap.xml
