@@ -2,20 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>https://shaichunfeng.com/categories/golang/</loc>
-        <lastmod>2022-04-03T08:40:24+08:00</lastmod>
-    </url>
-    <url>
         <loc>https://shaichunfeng.com/post/2022/04/03/structure-comparison/</loc>
         <lastmod>2022-04-03T08:40:24+08:00</lastmod>
     </url>
     <url>
         <loc>https://shaichunfeng.com/</loc>
         <lastmod>2022-04-03T08:40:24+08:00</lastmod>
-    </url>
-    <url>
-        <loc>https://shaichunfeng.com/categories/%E7%BD%91%E7%BB%9C/</loc>
-        <lastmod>2022-03-31T22:58:40+08:00</lastmod>
     </url>
     <url>
         <loc>https://shaichunfeng.com/post/2022/03/31/what-is-a-router/</loc>
@@ -46,16 +38,8 @@
         <lastmod>2022-03-26T15:20:29+08:00</lastmod>
     </url>
     <url>
-        <loc>https://shaichunfeng.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
-        <lastmod>2022-03-26T15:20:29+08:00</lastmod>
-    </url>
-    <url>
         <loc>https://shaichunfeng.com/post/2022/03/26/golang-design-patten-for-singleten/</loc>
         <lastmod>2022-03-26T15:02:24+08:00</lastmod>
-    </url>
-    <url>
-        <loc>https://shaichunfeng.com/categories/linux/</loc>
-        <lastmod>2021-09-19T16:38:01+08:00</lastmod>
     </url>
     <url>
         <loc>https://shaichunfeng.com/post/2021/09/19/linux-server-settings-time/</loc>
@@ -64,10 +48,6 @@
     <url>
         <loc>https://shaichunfeng.com/post/2021/09/16/mac-use-vmware-install-rackylinux/</loc>
         <lastmod>2021-09-16T11:54:58+08:00</lastmod>
-    </url>
-    <url>
-        <loc>https://shaichunfeng.com/categories/safe/</loc>
-        <lastmod>2021-08-20T12:12:35+08:00</lastmod>
     </url>
     <url>
         <loc>https://shaichunfeng.com/post/2021/08/20/credential-stuffing-attacks/</loc>
@@ -84,10 +64,6 @@
     <url>
         <loc>https://shaichunfeng.com/post/2021/07/26/slice-use/</loc>
         <lastmod>2021-07-26T18:22:09+08:00</lastmod>
-    </url>
-    <url>
-        <loc>https://shaichunfeng.com/categories/go%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/</loc>
-        <lastmod>2021-07-19T08:00:36+08:00</lastmod>
     </url>
     <url>
         <loc>https://shaichunfeng.com/post/2021/07/19/36-write-file/</loc>
@@ -158,10 +134,6 @@
         <lastmod>2021-07-19T08:00:01+08:00</lastmod>
     </url>
     <url>
-        <loc>https://shaichunfeng.com/categories/tools/</loc>
-        <lastmod>2021-07-13T15:34:42+08:00</lastmod>
-    </url>
-    <url>
         <loc>https://shaichunfeng.com/post/2021/07/13/wireshark-related-use/</loc>
         <lastmod>2021-07-13T15:34:42+08:00</lastmod>
     </url>
@@ -174,14 +146,6 @@
         <lastmod>2021-07-05T09:33:49+08:00</lastmod>
     </url>
     <url>
-        <loc>https://shaichunfeng.com/categories/docker/</loc>
-        <lastmod>2021-07-05T09:33:49+08:00</lastmod>
-    </url>
-    <url>
-        <loc>https://shaichunfeng.com/categories/mysql/</loc>
-        <lastmod>2021-07-03T19:30:17+08:00</lastmod>
-    </url>
-    <url>
         <loc>https://shaichunfeng.com/post/2021/07/03/mysql-creates-a-new-user-and-grants-permissions/</loc>
         <lastmod>2021-07-03T19:30:17+08:00</lastmod>
     </url>
@@ -190,19 +154,11 @@
         <lastmod>2021-07-03T17:26:11+08:00</lastmod>
     </url>
     <url>
-        <loc>https://shaichunfeng.com/categories/git/</loc>
-        <lastmod>2021-06-28T12:31:07+08:00</lastmod>
-    </url>
-    <url>
         <loc>https://shaichunfeng.com/post/2021/06/28/git-push-contain-lsf-file/</loc>
         <lastmod>2021-06-28T12:31:07+08:00</lastmod>
     </url>
     <url>
         <loc>https://shaichunfeng.com/post/2021/06/23/mac-use-freerdp/</loc>
-        <lastmod>2021-06-23T11:33:41+08:00</lastmod>
-    </url>
-    <url>
-        <loc>https://shaichunfeng.com/categories/tool/</loc>
         <lastmod>2021-06-23T11:33:41+08:00</lastmod>
     </url>
     <url>
@@ -246,20 +202,12 @@
         <lastmod>2021-06-13T01:29:24+08:00</lastmod>
     </url>
     <url>
-        <loc>https://shaichunfeng.com/categories/macos/</loc>
-        <lastmod>2021-06-12T10:09:55+08:00</lastmod>
-    </url>
-    <url>
         <loc>https://shaichunfeng.com/post/2021/06/12/mac-using-skills/</loc>
         <lastmod>2021-06-12T10:09:55+08:00</lastmod>
     </url>
     <url>
         <loc>https://shaichunfeng.com/post/2021/06/11/make-soffice-of-libreoffice-work-on-macos/</loc>
         <lastmod>2021-06-11T19:27:40+08:00</lastmod>
-    </url>
-    <url>
-        <loc>https://shaichunfeng.com/categories/elasticsearch/</loc>
-        <lastmod>2021-05-27T10:42:40+08:00</lastmod>
     </url>
     <url>
         <loc>https://shaichunfeng.com/post/2021/05/27/elasticsearch-use-logging/</loc>
@@ -282,10 +230,6 @@
         <lastmod>2021-05-27T09:53:38+08:00</lastmod>
     </url>
     <url>
-        <loc>https://shaichunfeng.com/categories/shell/</loc>
-        <lastmod>2021-05-25T01:34:23+08:00</lastmod>
-    </url>
-    <url>
         <loc>https://shaichunfeng.com/post/2021/05/26/shell-scirpt-code-structure/</loc>
         <lastmod>2021-05-25T01:34:23+08:00</lastmod>
     </url>
@@ -296,10 +240,6 @@
     <url>
         <loc>https://shaichunfeng.com/post/2021/05/23/docker-users-problem-logging/</loc>
         <lastmod>2021-05-23T22:44:18+08:00</lastmod>
-    </url>
-    <url>
-        <loc>https://shaichunfeng.com/categories/net-safe/</loc>
-        <lastmod>2021-05-23T22:23:35+08:00</lastmod>
     </url>
     <url>
         <loc>https://shaichunfeng.com/post/2021/04/29/tcpdump-climbing-package/</loc>
@@ -322,10 +262,6 @@
         <lastmod>2020-05-23T00:00:55+08:00</lastmod>
     </url>
     <url>
-        <loc>https://shaichunfeng.com/categories/nuxtjs/</loc>
-        <lastmod>2020-05-22T23:49:34+08:00</lastmod>
-    </url>
-    <url>
         <loc>https://shaichunfeng.com/post/2020/05/22/nuxt-is-deployed-to-the-docker-environment/</loc>
         <lastmod>2020-05-22T23:49:34+08:00</lastmod>
     </url>
@@ -346,10 +282,6 @@
         <lastmod>2020-05-18T23:01:53+08:00</lastmod>
     </url>
     <url>
-        <loc>https://shaichunfeng.com/categories/restful/</loc>
-        <lastmod>2020-05-17T22:55:15+08:00</lastmod>
-    </url>
-    <url>
         <loc>https://shaichunfeng.com/post/2020/05/17/what-status-code-should-an-existing-resource-return-when-adding-a-record/</loc>
         <lastmod>2020-05-17T22:55:15+08:00</lastmod>
     </url>
@@ -366,10 +298,6 @@
         <lastmod>2020-05-14T23:57:05+08:00</lastmod>
     </url>
     <url>
-        <loc>https://shaichunfeng.com/categories/idea/</loc>
-        <lastmod>2020-05-14T23:57:05+08:00</lastmod>
-    </url>
-    <url>
         <loc>https://shaichunfeng.com/post/2020/05/13/nuxt-reads-the-env-configuration-file/</loc>
         <lastmod>2020-05-13T23:47:52+08:00</lastmod>
     </url>
@@ -383,10 +311,6 @@
     </url>
     <url>
         <loc>https://shaichunfeng.com/post/2020/05/10/how-does-axios-get-http-response-header-data/</loc>
-        <lastmod>2020-05-10T23:12:49+08:00</lastmod>
-    </url>
-    <url>
-        <loc>https://shaichunfeng.com/categories/vue/</loc>
         <lastmod>2020-05-10T23:12:49+08:00</lastmod>
     </url>
     <url>
